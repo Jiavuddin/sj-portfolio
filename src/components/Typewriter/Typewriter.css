@@ -1,0 +1,60 @@
+.Typewriter__wrapper {
+    font-size: 19px !important;
+    font-weight: 600 !important;
+    font-family: "Blorado";
+    word-wrap: break-word;
+    letter-spacing: 1px;
+
+    @media (min-width: 550px) {
+        font-size: 20px !important;
+    }
+
+    @media (min-width: 650px) {
+        font-size: 22px !important;
+    }
+
+    @media (orientation: portrait) and (min-width: 768px) {
+        font-size: 28px !important;
+    }
+
+    @media (orientation: portrait) and (min-width: 820px) {
+        font-size: 32px !important;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 24px !important;
+    }
+
+    @media (min-width: 1600px) {
+        font-size: 28px !important;
+    }
+}
+
+.Typewriter__cursor {
+    font-size: 29px;
+
+
+    @media (min-width: 550px) {
+        font-size: 30px;
+    }
+
+    @media (min-width: 650px) {
+        font-size: 32px !important;
+    }
+
+    @media (orientation: portrait) and (min-width: 768px) {
+        font-size: 38px !important;
+    }
+
+    @media (orientation: portrait) and (min-width: 820px) {
+        font-size: 42px !important;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 34px !important;
+    }
+
+    @media (min-width: 1600px) {
+        font-size: 38px !important;
+    }
+}

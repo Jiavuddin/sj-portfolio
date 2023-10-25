@@ -1,0 +1,155 @@
+.contact-div {
+    height: 100%;
+    width: 100%;
+}
+
+.contact-h1 {
+    font-size: 28px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 900;
+
+    @media (min-width: 768px) {
+        font-size: 32px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 36px;
+    }
+}
+
+.contact-p {
+    font-size: 14px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 500;
+    color: var(--resume-pargraph-color);
+
+    @media (min-width: 550px) {
+        font-size: 16px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 20px;
+    }
+}
+
+.contact-p.dark {
+    color: var(--loader-background-light);
+}
+
+.contact-p a {
+    font-weight: 900;
+    color: var(--background-color-dark);
+}
+
+.contact-p.dark a {
+    color: var(--background-color-light);
+}
+
+.contact-p a:hover {
+    color: var(--resume-paragraph-hover-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.contact-p a {
+    text-decoration: none;
+}
+
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @media (min-width: 600px) {
+        width: 90%;
+    }
+
+    @media (min-width: 768px) {
+        width: 85%;
+    }
+
+    @media (min-width: 900px) {
+        width: 80%;
+        max-width: 630px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 75%;
+        max-width: 700px;
+    }
+}
+
+.contact-input,
+.contact-textarea {
+    width: 100%;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid var(--contact-input-light-border);
+    border-radius: 0.375rem;
+    padding: 0.8rem 1.25rem;
+    margin: 10px 0px;
+    cursor: pointer;
+    outline: none;
+}
+
+.contact-input {
+    height: 50px;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+    border: 1px solid #91C8E4;
+}
+
+.contact-textarea {
+    min-height: 120px;
+    max-height: 180px;
+}
+
+.contact-input.dark,
+.contact-textarea.dark {
+    color: var(--background-color-light);
+}
+
+.contact-input.dark:focus,
+.contact-textarea.dark:focus {
+    border: 1px solid #5C8374;
+}
+
+.contact-button {
+    height: 60px;
+    width: 180px;
+    font-size: 16px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 600;
+    color: var(--background-color-light);
+    background: var(--color-light);
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.contact-button.dark {
+    color: var(--background-color-dark);
+    background: var(--background-color-light);
+}
+
+.contact-space-div {
+    padding: 5px;
+
+    @media (min-width: 768px) {
+        padding: 32px;
+    }
+}

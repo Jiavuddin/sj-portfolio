@@ -1,0 +1,251 @@
+.pd-div {
+    height: 100%;
+    width: 100%;
+}
+
+.pd-h1 {
+    font-size: 28px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 900;
+
+    @media (min-width: 768px) {
+        font-size: 32px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 36px;
+    }
+}
+
+.pd-project-h1 {
+    font-size: 18px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 900;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+        font-size: 22px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 26px;
+    }
+}
+
+.pd-project-h1-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.pd-project-h1-link:hover {
+    color: var(--resume-paragraph-hover-color);
+}
+
+.pd-project-p {
+    font-size: 14px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 500;
+    color: var(--resume-pargraph-color);
+
+    @media (min-width: 550px) {
+        font-size: 16px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 20px;
+    }
+}
+
+.pd-project-p.dark {
+    color: var(--loader-background-light);
+}
+
+.pd-gif-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pd-gif-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 5px;
+}
+
+.pd-project-ul {
+    width: 100%;
+    list-style-type: circle;
+    line-height: 2;
+}
+
+.pd-project-ul li {
+    font-size: 14px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 500;
+    color: var(--resume-pargraph-color);
+
+    @media (min-width: 550px) {
+        font-size: 16px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+        padding-left: 8px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 20px;
+    }
+}
+
+.pd-project-ul li.dark {
+    color: var(--loader-background-light);
+}
+
+.pd-project-flip-p {
+    text-align: end;
+}
+
+.pd-project-flip-span {
+    color: inherit;
+    font-weight: 900;
+    text-align: end;
+    cursor: pointer;
+}
+
+.pd-technologies-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.pd-technology-btn {
+    font-size: 11px;
+    font-weight: 500;
+    font-family: "Blorado";
+    text-rendering: geometricprecision;
+    text-transform: capitalize;
+    color: #fff;
+    background: #213363;
+    padding: 6px 12px;
+    margin-right: 8px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+
+    @media (min-width: 768px) {
+        font-size: 12px;
+        padding: 8px 15px;
+        margin-right: 12px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 14px;
+        padding: 10px 18px;
+        margin-right: 15px;
+    }
+
+    @media (min-width: 1600px) {
+        font-size: 16px;
+        padding: 12px 28px;
+        margin-right: 18px;
+    }
+}
+
+.pd-website-svg {
+    height: 20px;
+    width: 20px;
+    fill: var(--color-light);
+    margin-right: 8px;
+
+    @media (min-width: 768px) {
+        height: 22px;
+        width: 22px;
+        margin-right: 12px;
+    }
+
+    @media (min-width: 1200px) {
+        height: 26px;
+        width: 26px;
+        margin-right: 16px;
+    }
+}
+
+.pd-website-svg.dark {
+    fill: var(--background-color-light);
+}
+
+.pd-website-a {
+    font-size: 14px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 900;
+    color: var(--background-color-dark);
+    text-decoration: none;
+
+    @media (min-width: 500px) {
+        font-size: 16px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 20px;
+    }
+}
+
+.pd-website-a.dark {
+    color: var(--background-color-light);
+}
+
+.pd-website-a:hover {
+    color: var(--resume-paragraph-hover-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.pd-icon {
+    font-size: 20px;
+    margin-right: 8px;
+
+    @media (min-width: 768px) {
+        font-size: 22px;
+        margin-right: 12px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 26px;
+        margin-right: 16px;
+    }
+}
+
+.pd-no-data-h1 {
+    font-size: 15px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 500;
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 22px;
+    }
+}

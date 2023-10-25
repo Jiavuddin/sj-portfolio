@@ -1,0 +1,48 @@
+.app {
+    height: calc(100dvh - 8vh);
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: var(--color-light);
+    background-color: var(--background-color-light);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0px 8vw;
+    transition: color 1s ease-in-out, background-color 1s ease-in-out;
+
+    @media (max-width: 768px) and (min-height: 1100px) {
+        height: calc(100dvh - 6vh);
+    }
+
+    @media (min-width: 768px) {
+        height: 100dvh;
+    }
+}
+
+.app::-webkit-scrollbar {
+    width: 6px;
+}
+
+.app::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+.app::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 5px;
+}
+
+.app::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+.app.mobile-nav-app {
+    height: 100dvh;
+}
+
+.app.dark {
+    color: var(--color-dark);
+    background-color: var(--background-color-dark);
+}

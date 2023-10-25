@@ -1,0 +1,234 @@
+.about-div {
+    height: 100%;
+    width: 100%;
+}
+
+.about-h1 {
+    font-size: 28px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 900;
+
+    @media (min-width: 768px) {
+        font-size: 32px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 36px;
+    }
+}
+
+.about-p {
+    font-size: 12px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 500;
+
+    @media (min-width: 400px) {
+        font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 16px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 18px;
+    }
+}
+
+.about-tech-stack-div {
+    flex-wrap: wrap;
+}
+
+.about-skill-div {
+    width: 33%;
+    flex-shrink: 0;
+    margin-bottom: 5vh;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    @media (min-width: 450px) {
+        width: 25%;
+    }
+
+    @media (min-width: 600px) {
+        width: 20%;
+    }
+
+    @media (min-width: 900px) {
+        width: 16.6%;
+    }
+
+    @media (min-width: 1100px) {
+        width: 14.2%;
+    }
+
+    @media (min-width: 1500px) {
+        width: 12.5%;
+    }
+
+    @media (min-width: 1600px) {
+        width: 10%;
+    }
+}
+
+.about-skill-div:hover {
+    transform: scale(1.2);
+
+    @media (min-width: 1100px) {
+        transform: scale(1.3);
+    }
+}
+
+.about-skill-div svg {
+    height: 42px;
+    width: 42px;
+    margin-bottom: 12px;
+}
+
+.about-skill-div span {
+    font-size: 15px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 500;
+}
+
+.about-skill-div:hover span {
+    font-weight: 600;
+}
+
+.about-collapsable-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #0E6BA875;
+    border-radius: 5px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+
+.about-collapsable-div h1 {
+    font-size: 16px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.about-details-div {
+    padding: 6px 12px 18px;
+}
+
+.about-card-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid var(--scrollbar-thumb-hover);
+    border-radius: 5px;
+    padding: 12px;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.about-img {
+    height: 45px;
+    width: 100px;
+    flex-shrink: 0;
+
+    @media (min-width: 768px) {
+        width: 110px;
+        margin-right: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-card-company-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+    }
+}
+
+.about-card-h1 {
+    font-size: 13px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 600;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        font-size: 15px;
+        text-align: start;
+    }
+}
+
+.about-card-p {
+    font-size: 12px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 500;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        font-size: 14px;
+        text-align: start;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-text-end {
+        text-align: end;
+    }
+}
+
+.about-card-ul {
+    width: 100%;
+    list-style-type: circle;
+    padding-left: 14px;
+    flex-shrink: 0;
+    line-height: 2;
+
+    @media (min-width: 768px) {
+        padding-left: 22px;
+    }
+
+    @media (min-width: 1200px) {
+        padding-left: 32px;
+    }
+}
+
+.about-card-ul li {
+    font-size: 12px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 500;
+
+    @media (min-width: 768px) {
+        font-size: 14px;
+        padding-left: 8px;
+    }
+}
+
+.about-edu-img {
+    height: 100px;
+    width: 120px;
+    flex-shrink: 0;
+    background-size: cover;
+
+    @media (min-width: 768px) {
+        height: 100px;
+        width: 110px;
+        margin-right: 12px;
+    }
+}

@@ -1,0 +1,80 @@
+.resume-div {
+    height: 100%;
+    width: 100%;
+}
+
+.resume-h1 {
+    font-size: 28px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 900;
+
+    @media (min-width: 768px) {
+        font-size: 32px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 36px;
+    }
+}
+
+.resume-p {
+    font-size: 12px;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    font-weight: 500;
+    color: var(--resume-pargraph-color);
+
+    @media (min-width: 550px) {
+        font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 16px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 18px;
+    }
+}
+
+.resume-p.dark {
+    color: var(--loader-background-light);
+}
+
+.resume-p span,
+.resume-p a {
+    font-weight: 900;
+    color: var(--background-color-dark);
+}
+
+.resume-p.dark span,
+.resume-p.dark a {
+    color: var(--background-color-light);
+}
+
+.resume-p span:hover,
+.resume-p a:hover {
+    color: var(--resume-paragraph-hover-color) !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.resume-p a {
+    text-decoration: none;
+}
+
+.resume-img {
+    height: auto;
+    width: 100%;
+    max-width: 900px;
+    border: 2px solid var(--color-light);
+}
+
+.resume-img.dark {
+    border: 2px solid var(--resume-img-dark-border);
+}
+
+.resume-space-div {
+    padding: 32px;
+}

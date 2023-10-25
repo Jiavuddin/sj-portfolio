@@ -1,0 +1,48 @@
+:root {
+    --color-light: #333333;
+    --background-color-light: #ffffff;
+    --color-dark: #ffffff;
+    --background-color-dark: #1f1f1f;
+    --scrollbar-track: #cccccc;
+    --scrollbar-thumb: #8CABFF;
+    --scrollbar-thumb-hover: #4477CE;
+    --loader-background-light: #DDE6ED;
+    --loader-background-dark: #27374D;
+    --home-name-shade: #713ABE;
+    --resume-pargraph-color: #545454;
+    --resume-paragraph-hover-color: #0056b3;
+    --resume-img-dark-border: #FAF0E6;
+    --contact-input-light-border: #e5e7eb;
+    --contact-input-light-focus-background: #F5F5F5;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease;
+}
+
+@font-face {
+    font-family: "Nabla";
+    src: local("Nabla"),
+        url("./fonts/Nabla/static/Nabla-Regular.ttf") format("truetype");
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Tangerine";
+    src: local("Tangerine"),
+        url("./fonts/Tangerine/Tangerine-Bold.ttf") format("truetype");
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Blorado";
+    src: local("Blorado"),
+        url("./fonts/NeurialGrotesk/NeurialGrotesk-Regular.otf") format("truetype");
+    font-display: block;
+}

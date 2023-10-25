@@ -1,0 +1,104 @@
+.routing-p {
+    width: max-content;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Blorado';
+    text-rendering: geometricprecision;
+    line-height: 1.5;
+
+    @media (min-width: 450px) {
+        font-size: 15px;
+    }
+
+    @media (min-width: 680px) {
+        font-size: 16px;
+    }
+
+    @media (orientation: portrait) and (min-width: 768px) {
+        font-size: 20px;
+    }
+
+    @media (orientation: portrait) and (min-width: 820px) {
+        font-size: 22px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 18px;
+    }
+
+    @media (min-width: 1400px) {
+        font-size: 20px;
+    }
+
+    @media (min-width: 1600px) {
+        font-size: 22px;
+    }
+}
+
+.routing-p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.arrow-svg {
+    fill: var(--color-light);
+    margin-left: 1rem;
+    animation-name: forward;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    @media (min-width: 450px) {
+        transform: scale(1.1);
+    }
+
+    @media (min-width: 680px) {
+        transform: scale(1.2);
+    }
+
+    @media (orientation: portrait) and (min-width: 768px) {
+        transform: scale(1.3);
+    }
+
+    @media (orientation: portrait) and (min-width: 820px) {
+        transform: scale(1.2);
+    }
+
+    @media (min-width: 1400px) {
+        transform: scale(1.3);
+    }
+
+    @media (min-width: 1600px) {
+        transform: scale(1.5);
+    }
+}
+
+.arrow-svg-dark {
+    fill: var(--color-dark);
+}
+
+@keyframes forward {
+    from {
+        margin-left: 1rem;
+
+        @media (min-width: 1400px) or ((orientation: portrait) and (min-width: 820px)) {
+            margin-left: 1.5rem;
+        }
+
+        @media (min-width: 1600px) {
+            margin-left: 1.8rem;
+        }
+    }
+
+    to {
+        margin-left: 2rem;
+
+        @media (min-width: 1400px) or ((orientation: portrait) and (min-width: 820px)) {
+            margin-left: 3rem;
+        }
+
+        @media (min-width: 1600px) {
+            margin-left: 3.6rem;
+        }
+    }
+}
