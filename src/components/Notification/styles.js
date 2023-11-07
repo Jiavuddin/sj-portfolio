@@ -32,6 +32,9 @@ export const Message = styled(animated.div)`
 	@media (max-width: 680px) {
 		width: 100%;
 	}
+    @media (min-width: 1024px) {
+        width: max-content;
+    }
 `
 
 export const Content = styled.div`
