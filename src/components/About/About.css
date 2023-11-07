@@ -5,7 +5,7 @@
 
 .about-h1 {
     font-size: 28px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 900;
 
@@ -20,7 +20,7 @@
 
 .about-p {
     font-size: 12px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 500;
 
@@ -89,7 +89,7 @@
 
 .about-skill-div span {
     font-size: 15px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 500;
 }
@@ -111,7 +111,7 @@
 
 .about-collapsable-div h1 {
     font-size: 16px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 500;
     margin-bottom: 0px;
@@ -128,7 +128,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    border: 1px solid var(--scrollbar-thumb-hover);
+    border: 1px solid #0E6BA875;
     border-radius: 5px;
     padding: 12px;
 
@@ -162,7 +162,7 @@
 
 .about-card-h1 {
     font-size: 13px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 600;
     text-align: center;
@@ -175,7 +175,7 @@
 
 .about-card-p {
     font-size: 12px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 500;
     text-align: center;
@@ -210,7 +210,7 @@
 
 .about-card-ul li {
     font-size: 12px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 500;
 

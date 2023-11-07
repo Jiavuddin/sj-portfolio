@@ -10,7 +10,7 @@ import './Projects.css';
 const projectsData = [
     {
         alt: "Food Munch Website",
-        src: "FoodMunch.gif",
+        src: "FoodMunch",
         title: "Food Munch",
         desc: "An all-in-one restaurant app for seamless dining experiences.",
         tech: [
@@ -21,7 +21,7 @@ const projectsData = [
     },
     {
         alt: "Tourism Website",
-        src: "Tourism.gif",
+        src: "Tourism",
         title: "Tourism",
         desc: "Your gateway to unforgettable travel experiences.",
         tech: [
@@ -29,7 +29,7 @@ const projectsData = [
             "CSS",
             "Bootstrap"
         ],
-    }
+    },
 ];
 
 function Projects() {
@@ -84,11 +84,12 @@ function Projects() {
                     >
 
                         <div className='projects-card-inside-div'>
-                            <img
-                                alt={item.alt}
-                                src={`/assets/Projects/${item.src}`}
-                                className='projects-gif-img'
-                            />
+
+                            <picture className='projects-card-picture'>
+                                <source srcSet={`/assets/Projects/${item.src}/${item.src}.webp`} type="image/webp" />
+                                <img className='projects-card-img' src={`/assets/Projects/${item.src}/${item.src}.png`} alt={`${item.src} project`} />
+                            </picture>
+
                         </div>
 
                         {((isDesktop && hoveredCard === index) || (!isDesktop)) && (

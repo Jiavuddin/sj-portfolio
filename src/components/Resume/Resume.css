@@ -5,7 +5,7 @@
 
 .resume-h1 {
     font-size: 28px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 900;
 
@@ -20,7 +20,7 @@
 
 .resume-p {
     font-size: 12px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 500;
     color: var(--resume-pargraph-color);

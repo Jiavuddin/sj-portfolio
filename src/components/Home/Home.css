@@ -40,7 +40,7 @@
 .home-greetings-h1 {
     font-size: 28px;
     font-weight: 600;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     margin-bottom: 18px;
 
     @media (min-width: 650px) {
@@ -98,7 +98,7 @@
     width: 100%;
     font-size: 30px;
     font-weight: 900;
-    font-family: "Blorado";
+    font-family: "NeurialGrotesk";
     text-rendering: geometricprecision;
     position: relative;
     text-align: left;

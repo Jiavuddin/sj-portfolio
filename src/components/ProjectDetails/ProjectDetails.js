@@ -8,48 +8,46 @@ import Routing from '../Routing/Routing';
 import Footer from '../Footer/Footer';
 import './ProjectDetails.css';
 
-const projectDetailsData = [
+const projectsData = [
     {
-        projectTitle: "Food Munch",
-        projectDesc: "An all-in-one restaurant app for seamless dining experiences.",
-        projectGifAlt: "Food Munch Website",
-        projectGifPath: "public/assets/Projects/FoodMunch.gif",
-        ProjectAbout: "Food Munch is a restaurant app designed to provide an exceptional dining experience. Our goal is to make it easy and enjoyable for customers to explore a diverse menu, order fresh and delicious meals, and conveniently make payments. We've created a seamless journey from menu exploration to payment, ensuring your satisfaction at every step. Food Munch - your gateway to a world of culinary passion.",
-        projectNerdPoints: [
+        title: "Food Munch",
+        desc: "An all-in-one restaurant app for seamless dining experiences.",
+        src: "FoodMunch",
+        about: "Food Munch is a restaurant app designed to provide an exceptional dining experience. Our goal is to make it easy and enjoyable for customers to explore a diverse menu, order fresh and delicious meals, and conveniently make payments. We've created a seamless journey from menu exploration to payment, ensuring your satisfaction at every step. Food Munch - your gateway to a world of culinary passion.",
+        techDetails: [
             "Built a Responsive Website using the Bootstrap grid system",
             "Used Bootstrap display, d-flex, align, padding, margin, order for a given device or viewport",
             "Embedded modals and YouTube videos so that users can watch product videos directly on the webpage",
             "Used Bootstrap Navbar, hyperlinks for navigating across sections to enhance user experience"
         ],
-        ProjectTech: [
+        techUsed: [
             "HTML",
             "CSS",
             "Bootstrap"
         ],
-        projectUrl: "https://syed-food-munch.vercel.app/",
-        projectGithubUrl: "https://github.com/Jiavuddin/food-munch"
+        url: "https://syed-food-munch.vercel.app/",
+        githubUrl: "https://github.com/Jiavuddin/food-munch"
     },
     {
-        projectTitle: "Tourism",
-        projectDesc: "Your gateway to unforgettable travel experiences.",
-        projectGifAlt: "Tourism Website",
-        projectGifPath: "public/assets/Projects/Tourism.gif",
-        ProjectAbout: "Welcome to Tourism, your gateway to unforgettable adventures. Discover dream destinations, from tranquil escapes to vibrant cities, and craft your ideal vacation effortlessly. We're committed to enhancing your travel experience with user-friendly tools and a world of resources. Join us on a journey of enriching exploration.",
-        projectNerdPoints: [
+        title: "Tourism",
+        desc: "Your gateway to unforgettable travel experiences.",
+        src: 'Tourism',
+        about: "Welcome to Tourism, your gateway to unforgettable adventures. Discover dream destinations, from tranquil escapes to vibrant cities, and craft your ideal vacation effortlessly. We're committed to enhancing your travel experience with user-friendly tools and a world of resources. Join us on a journey of enriching exploration.",
+        techDetails: [
             "Employed Bootstrap for creating a responsive and visually appealing design.",
             "Utilized Bootstrap Flex Box to establish a structured layout for content.",
             "Enhanced user engagement with Bootstrap Carousel for image displays.",
             "Leveraged an external CCBP script for efficient client-side routing and navigation.",
             "Crafted the static web page's foundation using HTML, CSS, and a touch of JavaScript to provide interactivity."
         ],
-        ProjectTech: [
+        techUsed: [
             "HTML",
             "CSS",
             "Bootstrap"
         ],
-        projectUrl: "https://syed-tourism.vercel.app/",
-        projectGithubUrl: "https://github.com/Jiavuddin/syed-tourism"
-    }
+        url: "https://syed-tourism.vercel.app/",
+        githubUrl: "https://github.com/Jiavuddin/syed-tourism"
+    },
 ];
 
 function ProjectDetails() {
@@ -58,7 +56,7 @@ function ProjectDetails() {
 
     const theme = useSelector(state => state.themeSlice.theme);
 
-    const projectData = projectDetailsData[parseInt(projectId)];
+    const projectData = projectsData[parseInt(projectId)];
 
     const [flipped, setFlipped] = useState(false);
 
@@ -73,34 +71,34 @@ function ProjectDetails() {
 
                     <div className='mt-2 mb-3'>
                         <motion.a
-                            href={projectData.projectUrl}
+                            href={projectData.url}
                             target='_blank'
                             rel="noreferrer"
                             className='pd-project-h1 pd-project-h1-link'
                             {...getTransitions(1.3)}
                         >
-                            {projectData.projectTitle}
+                            {projectData.title}
                         </motion.a>
                     </div>
 
-                    <motion.p className={`pd-project-p ${theme ? '' : 'dark'} mb-4`} {...getTransitions(1.6)}>{projectData.projectDesc}</motion.p>
+                    <motion.p className={`pd-project-p ${theme ? '' : 'dark'} mb-4`} {...getTransitions(1.6)}>{projectData.desc}</motion.p>
 
                     <div className='pd-gif-card'>
                         <motion.img
-                            alt={projectData.projectGifAlt}
-                            src={projectData.projectGifPath}
+                            alt={`${projectData.src} Website`}
+                            src={`/assets/Projects/${projectData.src}/${projectData.src}.gif`}
                             className='pd-gif-img mb-4'
                             {...getTransitions(1.9)}
                         />
                     </div>
 
-                    <ReactCardFlip isFlipped={flipped} flipDirection="horizontal">
+                    <ReactCardFlip isFlipped={flipped} flipDirection="horizontal" cardStyles={{ front: { transformStyle: 'flat' }, back: { transformStyle: 'flat' } }} flipSpeedBackToFront={1} flipSpeedFrontToBack={1}>
 
                         <div>
 
                             <motion.h1 className='pd-project-h1 mt-2 mb-3' {...getTransitions(2.2)}>About</motion.h1>
 
-                            <motion.p className={`pd-project-p ${theme ? '' : 'dark'} mb-3`} {...getTransitions(2.2)}>{projectData.ProjectAbout}</motion.p>
+                            <motion.p className={`pd-project-p ${theme ? '' : 'dark'} mb-3`} {...getTransitions(2.2)}>{projectData.about}</motion.p>
 
                             <motion.p className={`pd-project-p ${theme ? '' : 'dark'} pd-project-flip-p mb-4`} {...getTransitions(2.2)}>
                                 <span className='pd-project-flip-span' onClick={() => setFlipped(true)}>Technical Insights&ensp;{">>>"}</span>
@@ -113,7 +111,7 @@ function ProjectDetails() {
                             <motion.h1 className='pd-project-h1 mt-2 mb-3' {...getTransitions(2.2)}>Technical Insights</motion.h1>
 
                             <motion.ul className="pd-project-ul mb-3" {...getTransitions(2.2)}>
-                                {projectData.projectNerdPoints.map((nerdPoint, index) => (
+                                {projectData.techDetails.map((nerdPoint, index) => (
                                     <li key={`project-nerd-point-${index}`} className={theme ? '' : 'dark'}>{nerdPoint}</li>
                                 ))}
                             </motion.ul>
@@ -130,7 +128,7 @@ function ProjectDetails() {
 
                     <div className='pd-technologies-div mb-4'>
 
-                        {projectData.ProjectTech.map(item => (
+                        {projectData.techUsed.map(item => (
                             <motion.button
                                 key={`project-details-btn-${item}`}
                                 className={`pd-technology-btn ${theme ? '' : 'dark'}`}
@@ -159,13 +157,13 @@ function ProjectDetails() {
 
                     <div className='mb-4'>
                         <motion.a
-                            href={projectData.projectUrl}
+                            href={projectData.url}
                             target='_blank'
                             rel="noreferrer"
                             className={`pd-website-a ${theme ? '' : 'dark'} mb-4`}
                             {...getTransitions(2.2)}
                         >
-                            {projectData.projectUrl}
+                            {projectData.url}
                         </motion.a>
                     </div>
 
@@ -203,13 +201,13 @@ function ProjectDetails() {
 
                     <div className='mb-5'>
                         <motion.a
-                            href={projectData.projectGithubUrl}
+                            href={projectData.githubUrl}
                             target='_blank'
                             rel="noreferrer"
                             className={`pd-website-a ${theme ? '' : 'dark'}`}
                             {...getTransitions(2.2)}
                         >
-                            {projectData.projectGithubUrl}
+                            {projectData.githubUrl}
                         </motion.a>
                     </div>
 

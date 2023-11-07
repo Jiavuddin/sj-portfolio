@@ -5,7 +5,7 @@
 
 .contact-h1 {
     font-size: 28px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 900;
 
@@ -20,7 +20,7 @@
 
 .contact-p {
     font-size: 14px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 500;
     color: var(--resume-pargraph-color);
@@ -90,7 +90,7 @@
 .contact-input,
 .contact-textarea {
     width: 100%;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 500;
     background-color: transparent;
@@ -130,7 +130,7 @@
     height: 60px;
     width: 180px;
     font-size: 16px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 600;
     color: var(--background-color-light);

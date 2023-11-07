@@ -5,7 +5,7 @@
 
 .pd-h1 {
     font-size: 28px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 900;
 
@@ -20,7 +20,7 @@
 
 .pd-project-h1 {
     font-size: 18px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 900;
     cursor: pointer;
@@ -45,7 +45,7 @@
 
 .pd-project-p {
     font-size: 14px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 500;
     color: var(--resume-pargraph-color);
@@ -91,7 +91,7 @@
 
 .pd-project-ul li {
     font-size: 14px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 500;
     color: var(--resume-pargraph-color);
@@ -136,7 +136,7 @@
 .pd-technology-btn {
     font-size: 11px;
     font-weight: 500;
-    font-family: "Blorado";
+    font-family: "NeurialGrotesk";
     text-rendering: geometricprecision;
     text-transform: capitalize;
     color: #fff;
@@ -191,7 +191,7 @@
 
 .pd-website-a {
     font-size: 14px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 900;
     color: var(--background-color-dark);
@@ -237,7 +237,7 @@
 
 .pd-no-data-h1 {
     font-size: 15px;
-    font-family: 'Blorado';
+    font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
     font-weight: 500;
 

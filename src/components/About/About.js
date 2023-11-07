@@ -113,10 +113,13 @@ function About() {
             <motion.h1 className='about-h1 mt-2 mb-4' {...getTransitions(1)}>About Mé.</motion.h1>
 
             <motion.p className='about-p mb-4' {...getTransitions(1.3)}>
-                I'm a passionate Frontend Developer with over two years of hands-on experience in React.js. My web development journey began with intensive training, sparking my passion for creating user-centric digital experiences. I thrive on the challenge of translating complex ideas into intuitive interfaces while continuously pushing the boundaries of design and functionality.
+                I'm a dedicated Frontend Developer with over two years of hands-on experience in React.js. My web development journey began with intensive training, igniting my passion for crafting user-centric digital experiences. I excel at translating complex concepts into intuitive interfaces, continually pushing the boundaries of design and functionality.
                 <br />
                 <br />
-                Beyond my professional life, I immerse myself in a world of entertainment, balancing intense BGMI battles with the immersive storytelling of anime series and the occasional movie. Additionally, I find joy in creating and sharing content focused on BGMI, offering fellow enthusiasts a glimpse into my gaming adventures and experiences. I welcome collaborations and opportunities to apply my frontend development expertise. Let's join forces to make the web more engaging, user-friendly, and enhance the digital landscape together!
+                Beyond my professional life, I find inspiration in the world of entertainment. Whether engaged in intense BGMI battles, captivated by the immersive storytelling of anime series, or exploring the occasional movie, I'm a storyteller at heart. I also enjoy creating content that offers fellow BGMI enthusiasts a glimpse into my gaming adventures.
+                <br />
+                <br />
+                I'm actively seeking collaborative, full-time, and freelance opportunities to apply my frontend development expertise. Let's join forces to create more engaging, user-friendly web experiences and enhance the digital landscape.
             </motion.p>
 
             <motion.h1 className='about-h1 mb-5' {...getTransitions(1.6)}>Tech Stack</motion.h1>

@@ -29,20 +29,20 @@ body {
 @font-face {
     font-family: "Nabla";
     src: local("Nabla"),
-        url("./fonts/Nabla/static/Nabla-Regular.ttf") format("truetype");
+        url("./fonts/Nabla.ttf") format("truetype");
     font-display: block;
 }
 
 @font-face {
     font-family: "Tangerine";
     src: local("Tangerine"),
-        url("./fonts/Tangerine/Tangerine-Bold.ttf") format("truetype");
+        url("./fonts/Tangerine.ttf") format("truetype");
     font-display: block;
 }
 
 @font-face {
-    font-family: "Blorado";
-    src: local("Blorado"),
-        url("./fonts/NeurialGrotesk/NeurialGrotesk-Regular.otf") format("truetype");
+    font-family: "NeurialGrotesk";
+    src: local("NeurialGrotesk"),
+        url("./fonts/NeurialGrotesk.otf") format("truetype");
     font-display: block;
 }
