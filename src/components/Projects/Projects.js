@@ -27,7 +27,9 @@ const projectsData = [
         tech: [
             "HTML",
             "CSS",
-            "Bootstrap"
+            "Bootstrap",
+            "jQuery",
+            "JavaScript"
         ],
     },
 ];

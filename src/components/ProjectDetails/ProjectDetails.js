@@ -43,10 +43,12 @@ const projectsData = [
         techUsed: [
             "HTML",
             "CSS",
-            "Bootstrap"
+            "Bootstrap",
+            "jQuery",
+            "JavaScript"
         ],
-        url: "https://syed-tourism.vercel.app/",
-        githubUrl: "https://github.com/Jiavuddin/syed-tourism"
+        url: "https://sj-tourism.vercel.app/",
+        githubUrl: "https://github.com/Jiavuddin/Tourism"
     },
 ];
 

@@ -10,7 +10,7 @@ import './About.css';
 const experienceAndEdu = {
     work: {
         napier: {
-            logo: "Napier Logo.png",
+            logo: "Napier.png",
             title: "Napier Healthcare Solutions",
             role: "Associate Software Engineer",
             duration: "Sep 2021 - Present",
@@ -29,7 +29,7 @@ const experienceAndEdu = {
     },
     education: {
         sathyabama: {
-            logo: "Sathyabama logo.png",
+            logo: "Sathyabama.png",
             title: "Sathyabama Institute of science and technology",
             role: "Bachelor of Engineering",
             duration: "Jun 2016 - May 2020",
@@ -46,6 +46,7 @@ const experienceAndEdu = {
     courses: {
         nxtwave: {
             logo: "Nxtwave.svg",
+            logoDark: "Nxtwave dark.svg",
             title: "Nxtwave",
             role: "Full Stack Developer Course (MERN)",
             duration: "Dec 2020 - Sep 2021",
@@ -64,8 +65,8 @@ const experienceAndEdu = {
             ]
         },
         mongoDb: {
-            logo: "udemy logo.svg",
-            logoDark: "udemy logo dark.svg",
+            logo: "udemy.svg",
+            logoDark: "udemy dark.svg",
             title: "Udemy",
             role: "MongoDB - The Complete Developer's Guide 2023",
             duration: "Mar 2023",

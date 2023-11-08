@@ -33,13 +33,6 @@ function Resume() {
                 alt="Resume"
                 className={`resume-img ${theme ? '' : 'dark'} mb-4`}
                 src='/assets/Resume/Front End Developer.jpg'
-                srcSet="
-                    /assets/Resume/Front End Developer.jpg 280w,
-                    /assets/Resume/Front End Developer.jpg 600w,
-                    /assets/Resume/Front End Developer.jpg 900w,
-                    /assets/Resume/Front End Developer.jpg 1200w,
-                    /assets/Resume/Front End Developer.jpg 1800w"
-                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 900px"
                 {...getTransitions(1.6)}
             />
 

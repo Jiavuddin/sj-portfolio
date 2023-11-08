@@ -47,18 +47,8 @@ function Home() {
 
                             <motion.img
                                 alt="Home Logo"
-                                src='assets/Home Image/home logo.png'
+                                src='/assets/Home Image/home logo.png'
                                 className='home-img'
-                                srcSet="assets/Home Image/home logo.png 280w,
-                                    assets/Home Image/home logo.png 800w,
-                                    assets/Home Image/home logo.png 1200w,
-                                    assets/Home Image/home logo.png 1800w"
-                                sizes="(max-width: 600px) 280px,
-                                    (max-width: 1200px) 800px,
-                                    (max-width: 1800px) 1200px,
-                                    1800px"
-                                width="800"
-                                height="600"
                                 {...getTransitions(1)}
                             />
 
