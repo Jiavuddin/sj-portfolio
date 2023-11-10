@@ -29,16 +29,35 @@ const projectsData = [
         githubUrl: "https://github.com/Jiavuddin/food-munch"
     },
     {
+        title: "VR",
+        desc: "Escape reality, embrace virtual - Where experiences defy boundaries.",
+        src: "VR",
+        about: "Step beyond reality into a world of boundless possibilities on our VR website. Elevate your senses with immersive experiences that redefine what's possible. Innovation meets imagination – welcome to a new era of virtual exploration.",
+        techDetails: [
+            "Developed a visually appealing and responsive VR website using HTML, CSS, and Bootstrap components (Navbar, Carousel, Grid System).",
+            "Enhanced user engagement with dynamic carousel functionality using jQuery.",
+            "Implemented custom navigation logic using JavaScript for seamless Navbar interaction.",
+            "Integrated HTML, CSS, Bootstrap, jQuery, and JavaScript for a cohesive and immersive user experience."
+        ],
+        techUsed: [
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "jQuery",
+            "JavaScript"
+        ],
+        url: "https://sj-vr.vercel.app/",
+        githubUrl: "https://github.com/Jiavuddin/Responsive-websites/tree/main/VR"
+    },
+    {
         title: "Tourism",
         desc: "Your gateway to unforgettable travel experiences.",
         src: 'Tourism',
         about: "Welcome to Tourism, your gateway to unforgettable adventures. Discover dream destinations, from tranquil escapes to vibrant cities, and craft your ideal vacation effortlessly. We're committed to enhancing your travel experience with user-friendly tools and a world of resources. Join us on a journey of enriching exploration.",
         techDetails: [
-            "Employed Bootstrap for creating a responsive and visually appealing design.",
-            "Utilized Bootstrap Flex Box to establish a structured layout for content.",
-            "Enhanced user engagement with Bootstrap Carousel for image displays.",
-            "Leveraged an external CCBP script for efficient client-side routing and navigation.",
-            "Crafted the static web page's foundation using HTML, CSS, and a touch of JavaScript to provide interactivity."
+            "Designed a visually appealing, responsive website with HTML, CSS, and Bootstrap.",
+            "Enhanced design with Bootstrap's grid system and Carousel components.",
+            "Improved user experience using jQuery and JavaScript for interactivity and seamless client-side navigation.",
         ],
         techUsed: [
             "HTML",

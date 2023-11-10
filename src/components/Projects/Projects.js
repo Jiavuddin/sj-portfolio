@@ -20,6 +20,19 @@ const projectsData = [
         ],
     },
     {
+        alt: "VR Website",
+        src: "VR",
+        title: "VR",
+        desc: "Escape reality, embrace virtual - Where experiences defy boundaries.",
+        tech: [
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "jQuery",
+            "JavaScript"
+        ],
+    },
+    {
         alt: "Tourism Website",
         src: "Tourism",
         title: "Tourism",
