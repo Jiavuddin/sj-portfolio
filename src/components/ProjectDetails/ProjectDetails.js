@@ -10,34 +10,34 @@ import './ProjectDetails.css';
 
 const projectsData = [
     {
-        title: "Food Munch",
-        desc: "An all-in-one restaurant app for seamless dining experiences.",
-        src: "FoodMunch",
-        about: "Food Munch is a restaurant app designed to provide an exceptional dining experience. Our goal is to make it easy and enjoyable for customers to explore a diverse menu, order fresh and delicious meals, and conveniently make payments. We've created a seamless journey from menu exploration to payment, ensuring your satisfaction at every step. Food Munch - your gateway to a world of culinary passion.",
+        title: "Tourism",
+        desc: "Unveil the world's wonders, where exploration has no bounds.",
+        src: 'Tourism',
+        about: "Step into Tourism, your portal to extraordinary adventures, unlocking dream destinations effortlessly. Enhance your travel experience with seamless tools and abundant resources, embarking on an enriching exploration.",
         techDetails: [
-            "Built a Responsive Website using the Bootstrap grid system",
-            "Used Bootstrap display, d-flex, align, padding, margin, order for a given device or viewport",
-            "Embedded modals and YouTube videos so that users can watch product videos directly on the webpage",
-            "Used Bootstrap Navbar, hyperlinks for navigating across sections to enhance user experience"
+            "Crafted a visually captivating and responsive website by integrating HTML, CSS, and Bootstrap.",
+            "Enhanced design dynamics with Bootstrap's grid system and Carousel components, amplifying visual engagement.",
+            "Elevated user experience by implementing jQuery and JavaScript, delivering seamless interactivity and client-side navigation.",
         ],
         techUsed: [
             "HTML",
             "CSS",
-            "Bootstrap"
+            "Bootstrap",
+            "jQuery",
+            "JavaScript"
         ],
-        url: "https://syed-food-munch.vercel.app/",
-        githubUrl: "https://github.com/Jiavuddin/food-munch"
+        url: "https://sj-tourism.vercel.app/",
+        githubUrl: "https://github.com/Jiavuddin/Tourism"
     },
     {
         title: "VR",
-        desc: "Escape reality, embrace virtual - Where experiences defy boundaries.",
+        desc: "Transcend into boundless realities, embracing every experience.",
         src: "VR",
         about: "Step beyond reality into a world of boundless possibilities on our VR website. Elevate your senses with immersive experiences that redefine what's possible. Innovation meets imagination – welcome to a new era of virtual exploration.",
         techDetails: [
-            "Developed a visually appealing and responsive VR website using HTML, CSS, and Bootstrap components (Navbar, Carousel, Grid System).",
-            "Enhanced user engagement with dynamic carousel functionality using jQuery.",
-            "Implemented custom navigation logic using JavaScript for seamless Navbar interaction.",
-            "Integrated HTML, CSS, Bootstrap, jQuery, and JavaScript for a cohesive and immersive user experience."
+            "Constructed an immersive VR website using HTML, CSS, and Bootstrap, ensuring a captivating and responsive interface.",
+            "Employed Bootstrap elements such as the Navbar and Grid System, elevating the website's design and interactivity.",
+            "Incorporated jQuery for interactive carousel functionality, while leveraging JavaScript to manage dynamic navigation and highlight navigation items on the Navbar.",
         ],
         techUsed: [
             "HTML",
@@ -50,14 +50,14 @@ const projectsData = [
         githubUrl: "https://github.com/Jiavuddin/Responsive-websites/tree/main/VR"
     },
     {
-        title: "Tourism",
-        desc: "Your gateway to unforgettable travel experiences.",
-        src: 'Tourism',
-        about: "Welcome to Tourism, your gateway to unforgettable adventures. Discover dream destinations, from tranquil escapes to vibrant cities, and craft your ideal vacation effortlessly. We're committed to enhancing your travel experience with user-friendly tools and a world of resources. Join us on a journey of enriching exploration.",
+        title: "Ecommerce",
+        desc: "Unlock desires, the world is your choice.",
+        src: "Ecommerce",
+        about: "Step into a world of endless choices at our e-commerce hub, where convenience meets variety. From top-notch products to exclusive deals, enjoy a seamless shopping journey tailored just for you. With secure transactions and a user-friendly interface, finding what you love has never been easier. Elevate your shopping experience with us.",
         techDetails: [
-            "Designed a visually appealing, responsive website with HTML, CSS, and Bootstrap.",
-            "Enhanced design with Bootstrap's grid system and Carousel components.",
-            "Improved user experience using jQuery and JavaScript for interactivity and seamless client-side navigation.",
+            "Engineered an E-commerce application using HTML, CSS, and Bootstrap elements like Navbar, Carousel, Modal, and the Grid System, ensuring a dynamic and responsive user interface.",
+            "Leveraged jQuery to facilitate carousel transitions, enhancing the visual experience and user engagement.",
+            "Implemented JavaScript to enable seamless navigation with the Navbar, highlighting active navigation items and ensuring an intuitive browsing experience for users.",
         ],
         techUsed: [
             "HTML",
@@ -66,8 +66,28 @@ const projectsData = [
             "jQuery",
             "JavaScript"
         ],
-        url: "https://sj-tourism.vercel.app/",
-        githubUrl: "https://github.com/Jiavuddin/Tourism"
+        url: "https://sj-ecom.vercel.app/",
+        githubUrl: "https://github.com/Jiavuddin/Responsive-websites/tree/main/Ecommerce"
+    },
+    {
+        title: "Food Munch",
+        desc: "Savor every flavor, a delight worth relishing.",
+        src: "FoodMunch",
+        about: "Food Munch brings a delight in savoring every flavor. Our meticulously crafted restaurant app ensures an exceptional dining experience. From a diverse menu to fresh, delicious meals, and seamless payments, we've designed a journey focused on your satisfaction at every step. Welcome to a world of culinary passion.",
+        techDetails: [
+            "Crafted the Food Munch restaurant app with a blend of HTML, CSS, and a range of Bootstrap components like the Navbar, Modal, and Grid System, for an inviting and responsive user interface.",
+            "Employed JavaScript to seamlessly handle Navbar navigation, enriching the user experience by emphasizing key navigation items.",
+            "Enhanced user interaction by integrating a YouTube video within a modal, offering a range of multimedia content for a more immersive user experience."
+        ],
+        techUsed: [
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "jQuery",
+            "JavaScript"
+        ],
+        url: "https://sj-foodmunch.vercel.app/",
+        githubUrl: "https://github.com/Jiavuddin/responsive-websites/tree/main/FoodMunch"
     },
 ];
 

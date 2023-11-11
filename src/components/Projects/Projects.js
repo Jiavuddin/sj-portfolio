@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
 import getTransitions from '../../utils/transitions';
@@ -7,23 +7,13 @@ import Routing from '../Routing/Routing';
 import Footer from '../Footer/Footer';
 import './Projects.css';
 
-const projectsData = [
+const projects = [
     {
-        alt: "Food Munch Website",
-        src: "FoodMunch",
-        title: "Food Munch",
-        desc: "An all-in-one restaurant app for seamless dining experiences.",
-        tech: [
-            "HTML",
-            "CSS",
-            "Bootstrap"
-        ],
-    },
-    {
-        alt: "VR Website",
-        src: "VR",
-        title: "VR",
-        desc: "Escape reality, embrace virtual - Where experiences defy boundaries.",
+        id: 0,
+        alt: "Tourism Website",
+        src: "Tourism",
+        title: "Tourism",
+        desc: "Unveil the world's wonders, where exploration has no bounds.",
         tech: [
             "HTML",
             "CSS",
@@ -33,10 +23,39 @@ const projectsData = [
         ],
     },
     {
-        alt: "Tourism Website",
-        src: "Tourism",
-        title: "Tourism",
-        desc: "Your gateway to unforgettable travel experiences.",
+        id: 1,
+        alt: "VR Website",
+        src: "VR",
+        title: "VR",
+        desc: "Transcend into boundless realities, embracing every experience.",
+        tech: [
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "jQuery",
+            "JavaScript"
+        ],
+    },
+    {
+        id: 2,
+        alt: "Ecommerce Website",
+        src: "Ecommerce",
+        title: "Ecommerce",
+        desc: "Unlock desires, the world is your choice.",
+        tech: [
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "jQuery",
+            "JavaScript"
+        ],
+    },
+    {
+        id: 3,
+        alt: "Food Munch Website",
+        src: "FoodMunch",
+        title: "Food Munch",
+        desc: "Savor every flavor, a delight worth relishing.",
         tech: [
             "HTML",
             "CSS",
@@ -53,6 +72,18 @@ function Projects() {
 
     const [isDesktop, setIsDesktop] = useState(false);
     const [hoveredCard, setHoveredCard] = useState(null);
+
+    const projectsData = useMemo(() => {
+
+        const shuffledData = [];
+
+        actualProjects.forEach(element => {
+            shuffledData.unshift(element);
+        });
+
+        return shuffledData;
+
+    }, []);
 
     useEffect(() => {
 
@@ -87,14 +118,14 @@ function Projects() {
 
             <div className='projects-cards-div mb-4'>
 
-                {projectsData.map((item, index) => (
+                {projectsData.map(item => (
 
                     <motion.div
-                        key={`${item.title}-${index}`}
+                        key={`${item.title}-${item.id}`}
                         className="d-flex align-items-start projects-card-div"
-                        onMouseEnter={() => handleMouseEnter(index)}
+                        onMouseEnter={() => handleMouseEnter(item.id)}
                         onMouseLeave={handleMouseLeave}
-                        onClick={() => navigate(routingPaths.projects + `/${index}`)}
+                        onClick={() => navigate(routingPaths.projects + `/${item.id}`)}
                         {...getTransitions(1.3)}
                     >
 
@@ -107,11 +138,11 @@ function Projects() {
 
                         </div>
 
-                        {((isDesktop && hoveredCard === index) || (!isDesktop)) && (
+                        {((isDesktop && hoveredCard === item.id) || (!isDesktop)) && (
 
                             <div className='project-card-overlay'>
 
-                                <motion.h1 className='project-card-overlay-h1 ' {...getTransitions(isDesktop ? 0.3 : 1.3)}>{item.title}</motion.h1>
+                                <motion.h1 className='project-card-overlay-h1' {...getTransitions(isDesktop ? 0.3 : 1.3)}>{item.title}</motion.h1>
 
                                 <motion.p className='project-card-overlay-p ml-2' {...getTransitions(isDesktop ? 0.6 : 1.6)}>{item.desc}</motion.p>
 
@@ -120,7 +151,7 @@ function Projects() {
                                     {item.tech.map(techItem => (
 
                                         <motion.button
-                                            key={`${item.title}-${index}-${techItem}`}
+                                            key={`${item.title}-${item.id}-${techItem}`}
                                             className='project-card-btn'
                                             {...getTransitions(isDesktop ? 0.9 : 1.9)}
                                         >
