@@ -102,16 +102,16 @@
     margin-left: 12px;
 
     @media (min-width: 768px) {
-        margin-left: 22px;
+        margin-left: 22px !important;
     }
 
     @media (min-width: 1200px) {
-        margin-left: 26px;
+        margin-left: 26px !important;
     }
 
     @media (min-width: 1600px) {
         font-size: 26px;
-        margin-left: 32px;
+        margin-left: 32px !important;
     }
 }
 
@@ -124,17 +124,17 @@
 
     @media (min-width: 768px) {
         font-size: 14px;
-        margin-left: 22px;
+        margin-left: 22px !important;
     }
 
     @media (min-width: 1200px) {
         font-size: 16px;
-        margin-left: 26px;
+        margin-left: 26px !important;
     }
 
     @media (min-width: 1600px) {
         font-size: 18px;
-        margin-left: 32px;
+        margin-left: 32px !important;
     }
 }
 
