@@ -77,12 +77,11 @@ function Projects() {
 
         const shuffledData = [];
 
-        actualProjects.forEach(element => {
+        projects.forEach(element => {
             shuffledData.unshift(element);
         });
 
         return shuffledData;
-
     }, []);
 
     useEffect(() => {
