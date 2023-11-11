@@ -141,7 +141,7 @@ function Projects() {
 
                             <div className='project-card-overlay'>
 
-                                <motion.h1 className='project-card-overlay-h1' {...getTransitions(isDesktop ? 0.3 : 1.3)}>{item.title}</motion.h1>
+                                <motion.h1 className='project-card-overlay-h1 ml-2' {...getTransitions(isDesktop ? 0.3 : 1.3)}>{item.title}</motion.h1>
 
                                 <motion.p className='project-card-overlay-p ml-2' {...getTransitions(isDesktop ? 0.6 : 1.6)}>{item.desc}</motion.p>
 
