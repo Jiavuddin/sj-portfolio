@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import routingPaths from "./utils/constants/routingConstants";
 import { changeTheme } from "./utils/StoreSetup/themeSlice";
+import Offline from "./components/Offline/Offline";
 import Loader from "./components/Loader/Loader";
 import Navbar from './components/Navbar/Navbar';
 import MobileNavbar from "./components/MobileNavbar/MobileNavbar";
@@ -23,12 +24,44 @@ function App() {
 
     const theme = useSelector((state) => state.themeSlice.theme);
 
+    const [isOnline, setIsOnline] = useState(window.navigator.onLine);
+
     const [loader, setLoader] = useState(true);
 
     const [width, setWidth] = useState(() => window.innerWidth);
 
     const scrollContainerRef = useRef();
 
+    // Handles the user internet availability 
+    useEffect(() => {
+
+        const handleOnlineStatus = () => {
+
+            setIsOnline(window.navigator.onLine);
+
+            if (window.navigator.onLine) {
+
+                setLoader(true);
+
+                setTimeout(() => {
+                    setLoader(false);
+                }, 8000);
+            }
+            else {
+                setLoader(false);
+            }
+        };
+
+        window.addEventListener('online', handleOnlineStatus);
+        window.addEventListener('offline', handleOnlineStatus);
+
+        return () => {
+            window.removeEventListener('online', handleOnlineStatus);
+            window.removeEventListener('offline', handleOnlineStatus);
+        };
+    }, []);
+
+    // Handles the system theme
     useEffect(() => {
 
         const lightMode = window.matchMedia('(prefers-color-scheme: light)');
@@ -51,6 +84,7 @@ function App() {
 
     }, [dispatch]);
 
+    // Handles the app loader
     useEffect(() => {
 
         setLoader(true);
@@ -68,6 +102,7 @@ function App() {
 
     }, [dispatch]);
 
+    // Handles Window resizing
     useEffect(() => {
 
         const updateOrientation = () => {
@@ -92,93 +127,114 @@ function App() {
     }, [location.pathname]);
 
     return (
-        <div ref={scrollContainerRef} className={`app ${theme ? '' : 'dark'} ${(location.pathname === routingPaths.mobileNavMenu || loader) ? 'mobile-nav-app' : ''}`}>
+        <div ref={scrollContainerRef} className={`app ${theme ? '' : 'dark'} ${(!isOnline || (location.pathname === routingPaths.mobileNavMenu) || loader) ? 'mobile-nav-app' : ''}`}>
 
-            {loader ? (
-                <Loader />
+            {/* Renders User offline Page */}
+            {!isOnline ? (
+                <Offline setIsOnline={setIsOnline} />
             ) : (
-
+                // Renders User Online Page
                 <>
 
-                    {location.pathname !== routingPaths.mobileNavMenu && (
-                        <Navbar />
-                    )}
+                    {/* Renders Loader */}
+                    {loader ? (
+                        <Loader />
+                    ) : (
 
-                    <Routes>
+                        <>
 
-                        <Route
-                            exact
-                            path={routingPaths.home}
-                            element={
-                                <Home />
-                            }
-                        />
+                            {/* Renders Navbar */}
+                            {location.pathname !== routingPaths.mobileNavMenu && (
+                                <Navbar />
+                            )}
 
-                        <Route
-                            exact
-                            path={routingPaths.mobileNavMenu}
-                            element={
-                                <MobileNavbar />
-                            }
-                        />
+                            <Routes>
 
-                        <Route
-                            exact
-                            path={routingPaths.about}
-                            element={
-                                <About />
-                            }
-                        />
+                                {/* Renders Home Page */}
+                                <Route
+                                    exact
+                                    path={routingPaths.home}
+                                    element={
+                                        <Home />
+                                    }
+                                />
 
-                        <Route
-                            exact
-                            path={routingPaths.projects}
-                            element={
-                                <Projects />
-                            }
-                        />
+                                {/* Renders Mobile Navbar Page */}
+                                <Route
+                                    exact
+                                    path={routingPaths.mobileNavMenu}
+                                    element={
+                                        <MobileNavbar />
+                                    }
+                                />
 
-                        <Route
-                            exact
-                            path={routingPaths.projectDetails}
-                            element={<ProjectDetails />}
-                        />
+                                {/* Renders About Me Page */}
+                                <Route
+                                    exact
+                                    path={routingPaths.about}
+                                    element={
+                                        <About />
+                                    }
+                                />
 
-                        <Route
-                            exact
-                            path={routingPaths.contact}
-                            element={
-                                <Contact />
-                            }
-                        />
+                                {/* Renders Projects Page */}
+                                <Route
+                                    exact
+                                    path={routingPaths.projects}
+                                    element={
+                                        <Projects />
+                                    }
+                                />
 
-                        <Route
-                            exact
-                            path={routingPaths.resume}
-                            element={
-                                <Resume />
-                            }
-                        />
+                                {/* Renders Project Details Page */}
+                                <Route
+                                    exact
+                                    path={routingPaths.projectDetails}
+                                    element={<ProjectDetails />}
+                                />
 
-                        <Route
-                            exact
-                            path="*"
-                            element={
-                                <Navigate to={routingPaths.home} replace />
-                            }
-                        />
+                                {/* Renders Contact Page */}
+                                <Route
+                                    exact
+                                    path={routingPaths.contact}
+                                    element={
+                                        <Contact />
+                                    }
+                                />
 
-                    </Routes>
+                                {/* Renders Resume Page */}
+                                <Route
+                                    exact
+                                    path={routingPaths.resume}
+                                    element={
+                                        <Resume />
+                                    }
+                                />
 
-                    {(width <= 767 && location.pathname !== routingPaths.mobileNavMenu) && (
-                        <Footer cond={false} />
+                                {/* Handles Fallback Navigation */}
+                                <Route
+                                    exact
+                                    path="*"
+                                    element={
+                                        <Navigate to={routingPaths.home} replace />
+                                    }
+                                />
+
+                            </Routes>
+
+                            {/* Renders Footer */}
+                            {(width <= 767 && location.pathname !== routingPaths.mobileNavMenu) && (
+                                <Footer cond={false} />
+                            )}
+
+                        </>
+
                     )}
 
                 </>
-
             )}
 
-        </div>
+        </div >
     );
 }
 
