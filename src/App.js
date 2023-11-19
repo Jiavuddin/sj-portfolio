@@ -130,11 +130,10 @@ function App() {
         <div className='app-offline-div'>
 
             {/* Renders Offline Image */}
-            <motion.img
+            <img
                 alt='offline'
                 src='/assets/Offline/Offline.png'
                 className='mb-3'
-                {...getTransitions(1)}
             />
 
             <motion.p {...getTransitions(1.3)}>Uh oh! It seems you're offline.</motion.p>
