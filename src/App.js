@@ -126,39 +126,36 @@ function App() {
         scrollContainerRef.current.scrollTo(0, 0);
     }, [location.pathname]);
 
-    const renderOfflinePage = () => (
-        <div className='app-offline-div'>
-
-            {/* Renders Offline Image */}
-            <img
-                alt='offline'
-                src='/assets/Offline/Offline.png'
-                className='mb-3'
-            />
-
-            <motion.p {...getTransitions(1.3)}>Uh oh! It seems you're offline.</motion.p>
-
-            <motion.p className="mb-4" {...getTransitions(1.6)}>Please check your internet connection and try again.</motion.p>
-
-            {/* Renders Refresh Button */}
-            <motion.button
-                type="button"
-                className={`${theme ? '' : 'dark'}`}
-                onClick={() => setIsOnline(window.navigator.onLine)}
-                {...getTransitions(1.9)}
-            >
-                Refresh
-            </motion.button>
-
-        </div>
-    );
-
     return (
         <div ref={scrollContainerRef} className={`app ${theme ? '' : 'dark'} ${(!isOnline || (location.pathname === routingPaths.mobileNavMenu) || loader) ? 'mobile-nav-app' : ''}`}>
 
             {/* Renders User offline Page */}
             {!isOnline ? (
-                renderOfflinePage()
+                <div className='app-offline-div'>
+
+                    {/* Renders Offline Image */}
+                    <motion.img
+                        alt='offline'
+                        src='/assets/Offline/Offline.png'
+                        className='mb-3'
+                        {...getTransitions(1)}
+                    />
+
+                    <motion.p {...getTransitions(1.3)}>Uh oh! It seems you're offline.</motion.p>
+
+                    <motion.p className="mb-4" {...getTransitions(1.6)}>Please check your internet connection and try again.</motion.p>
+
+                    {/* Renders Refresh Button */}
+                    <motion.button
+                        type="button"
+                        className={`${theme ? '' : 'dark'}`}
+                        onClick={() => setIsOnline(window.navigator.onLine)}
+                        {...getTransitions(1.9)}
+                    >
+                        Refresh
+                    </motion.button>
+
+                </div>
             ) : (
                 // Renders User Online Page
                 <>
