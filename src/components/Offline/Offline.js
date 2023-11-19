@@ -6,7 +6,7 @@ import './Offline.css';
 
 function Offline({ setIsOnline }) {
 
-    const offlineImageUrl = '/assets/Offline/Offline.png';
+    const offlineImageUrl = window.offlineImg.src;
 
     // Access Theme from the store
     const theme = useSelector(state => state.themeSlice.theme);
