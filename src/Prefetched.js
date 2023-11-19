@@ -1,3 +1,5 @@
+import React, { useEffect } from "react";
+
 const PreloadImage = () => {
     const imageUrl = '/assets/Offline/Offline.png';
 

@@ -33,6 +33,16 @@ function App() {
 
     const scrollContainerRef = useRef();
 
+    // useEffect(() => {
+
+    //     const offlineImageUrl = '/assets/Offline/Offline.png';
+
+    //     const img = new Image();
+    //     img.src = offlineImageUrl;
+
+    //     window.offlineImg = img;
+    // }, []);
+
     // Handles the user internet availability 
     useEffect(() => {
 
