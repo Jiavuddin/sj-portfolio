@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import routingPaths from "./utils/constants/routingConstants";
 import { changeTheme } from "./utils/StoreSetup/themeSlice";
-import getTransitions from "./utils/transitions";
+// import getTransitions from "./utils/transitions";
+import Offline from "./components/Offline/Offline";
 import Loader from "./components/Loader/Loader";
 import Navbar from './components/Navbar/Navbar';
 import MobileNavbar from "./components/MobileNavbar/MobileNavbar";
@@ -131,31 +132,32 @@ function App() {
 
             {/* Renders User offline Page */}
             {!isOnline ? (
-                <div className='app-offline-div'>
+                // <div className='app-offline-div'>
 
-                    {/* Renders Offline Image */}
-                    <motion.img
-                        alt='offline'
-                        src='/assets/Offline/Offline.png'
-                        className='mb-3'
-                        {...getTransitions(1)}
-                    />
+                //     {/* Renders Offline Image */}
+                //     <motion.img
+                //         alt='offline'
+                //         src='/assets/Offline/Offline.png'
+                //         className='mb-3'
+                //         {...getTransitions(1)}
+                //     />
 
-                    <motion.p {...getTransitions(1.3)}>Uh oh! It seems you're offline.</motion.p>
+                //     <motion.p {...getTransitions(1.3)}>Uh oh! It seems you're offline.</motion.p>
 
-                    <motion.p className="mb-4" {...getTransitions(1.6)}>Please check your internet connection and try again.</motion.p>
+                //     <motion.p className="mb-4" {...getTransitions(1.6)}>Please check your internet connection and try again.</motion.p>
 
-                    {/* Renders Refresh Button */}
-                    <motion.button
-                        type="button"
-                        className={`${theme ? '' : 'dark'}`}
-                        onClick={() => setIsOnline(window.navigator.onLine)}
-                        {...getTransitions(1.9)}
-                    >
-                        Refresh
-                    </motion.button>
+                //     {/* Renders Refresh Button */}
+                //     <motion.button
+                //         type="button"
+                //         className={`${theme ? '' : 'dark'}`}
+                //         onClick={() => setIsOnline(window.navigator.onLine)}
+                //         {...getTransitions(1.9)}
+                //     >
+                //         Refresh
+                //     </motion.button>
 
-                </div>
+                // </div>
+                <Offline />
             ) : (
                 // Renders User Online Page
                 <>
