@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
-const PreloadImage = () => {
+function PreloadImage() {
+
     const imageUrl = '/assets/Offline/Offline.png';
 
     const preloadImage = () => {
@@ -13,7 +14,7 @@ const PreloadImage = () => {
         preloadImage();
     }, []);
 
-    return null; // This component doesn't render anything
+    return null;
 };
 
 export default PreloadImage;
