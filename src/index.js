@@ -14,12 +14,12 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import '@coreui/coreui/dist/css/coreui.min.css';
 import './index.css';
 
-// const offlineImageUrl = '/assets/Offline/Offline.png';
+const offlineImageUrl = '/assets/Offline/Offline.png';
 
-// const img = new Image();
-// img.src = offlineImageUrl;
+const img = new Image();
+img.src = offlineImageUrl;
 
-// window.offlineImg = img;
+window.offlineImg = img;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
