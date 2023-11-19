@@ -10,6 +10,7 @@ import './Resume.css';
 
 function Resume() {
 
+    // Access Navigation Object
     const navigate = useNavigate();
 
     // Access theme from store
@@ -25,12 +26,15 @@ function Resume() {
                 {/* Navigates to Contact Page */}
                 <span onClick={() => navigate(routingPaths.contact)}>Contact Page</span>
                 &nbsp;and&nbsp;
+                {/* Navigates to Resume View Page */}
                 <span onClick={() => window.open("https://drive.google.com/file/d/1V_pVIhrxDM45PXGfwccvKn-HUnnsMIGJ/view?usp=drive_link")}>view</span>
                 &nbsp;or&nbsp;
+                {/* Downloads the Resume */}
                 <a href='/assets/Resume/Front End Developer.pdf' download>download</a>
                 &nbsp;my resume.
             </motion.p>
 
+            {/* Renders Resume */}
             <motion.img
                 alt="Resume"
                 className={`resume-img ${theme ? '' : 'dark'} mb-4`}
@@ -38,10 +42,13 @@ function Resume() {
                 {...getTransitions(1.6)}
             />
 
+            {/* Renders Routing Element */}
             <Routing />
 
+            {/* Renders Footer */}
             <Footer cond={true} />
 
+            {/* Maintains Spacing below the screen */}
             {(window.innerWidth >= 768) && (
                 <div className='resume-space-div'></div>
             )}

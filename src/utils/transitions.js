@@ -1,3 +1,4 @@
+// Transition Config for framer motion
 const getTransitions = (delay) => ({
     transition: { duration: 0.5, delay },
     initial: { opacity: 0, y: 20, scale: 0.98 },

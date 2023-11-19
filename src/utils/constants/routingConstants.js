@@ -1,3 +1,4 @@
+// App Routing Constants
 const routingPaths = {
     home: '/',
     mobileNavMenu: '/mobileMenu',

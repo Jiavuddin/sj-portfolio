@@ -10,11 +10,11 @@ import './Routing.css';
 const getRouteMsg = (pathname) => {
     switch (pathname) {
         case routingPaths.home:
-            return 'See More About Me';
+            return 'Explore More About Me';
         case routingPaths.about:
-            return 'Lets Continue To Projects';
+            return 'Checkout My Projects';
         case routingPaths.projects:
-            return 'Lets Go To My Resume';
+            return 'Discover My Resume';
         case routingPaths.resume:
             return 'Get in Touch!';
         case routingPaths.contact:
@@ -30,6 +30,7 @@ function Routing() {
 
     const location = useLocation();
 
+    // Access theme from store
     const theme = useSelector((state) => state.themeSlice.theme);
 
     // Route Handler
@@ -63,6 +64,7 @@ function Routing() {
 
                 {getRouteMsg(location?.pathname)}
 
+                {/* Renders Arrow Icon */}
                 <svg className={`arrow-svg ${theme ? "" : "arrow-svg-dark"}`} width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd">
                     <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"></path>
                 </svg>
