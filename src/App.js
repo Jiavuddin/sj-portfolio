@@ -131,7 +131,13 @@ function App() {
 
             {/* Renders User offline Page */}
             {!isOnline ? (
-                <Offline setIsOnline={setIsOnline} />
+                // {/* Renders Offline Image */ }
+                <img
+                    alt='offline'
+                    src='/assets/Offline/Offline.png'
+                    className='mb-3'
+                />
+                // <Offline setIsOnline={setIsOnline} />
             ) : (
                 // Renders User Online Page
                 <>
