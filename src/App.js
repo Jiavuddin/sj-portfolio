@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import routingPaths from "./utils/constants/routingConstants";
 import { changeTheme } from "./utils/StoreSetup/themeSlice";
+import PreloadImage from "./Prefetched";
 import Offline from "./components/Offline/Offline";
 import Loader from "./components/Loader/Loader";
 import Navbar from './components/Navbar/Navbar';
@@ -128,6 +129,8 @@ function App() {
 
     return (
         <div ref={scrollContainerRef} className={`app ${theme ? '' : 'dark'} ${(!isOnline || (location.pathname === routingPaths.mobileNavMenu) || loader) ? 'mobile-nav-app' : ''}`}>
+
+            <PreloadImage />
 
             {/* Renders User offline Page */}
             {!isOnline ? (

@@ -6,7 +6,7 @@ import './Offline.css';
 
 function Offline({ setIsOnline }) {
 
-    const imageUrl = '/assets/Offline/Offline.png';
+    const offlineImageUrl = '/assets/Offline/Offline.png';
 
     // Access Theme from the store
     const theme = useSelector(state => state.themeSlice.theme);
@@ -22,7 +22,7 @@ function Offline({ setIsOnline }) {
             {/* Renders Offline Image */}
             <motion.img
                 alt='offline'
-                src={imageUrl}
+                src={offlineImageUrl}
                 className='mb-3'
                 {...getTransitions(1)}
             />
