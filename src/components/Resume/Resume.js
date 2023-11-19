@@ -10,9 +10,10 @@ import './Resume.css';
 
 function Resume() {
 
-    const theme = useSelector(state => state.themeSlice.theme);
-
     const navigate = useNavigate();
+
+    // Access theme from store
+    const theme = useSelector(state => state.themeSlice.theme);
 
     return (
         <div className='d-flex flex-column justify-content-start align-items-start resume-div pt-2'>
@@ -20,19 +21,20 @@ function Resume() {
             <motion.h1 className='resume-h1 mb-4' {...getTransitions(1)}>Resumé.</motion.h1>
 
             <motion.p className={`resume-p ${theme ? '' : 'dark'} mb-4`} {...getTransitions(1.3)}>
-                React out to me via my&nbsp;
+                Reach out to me via my&nbsp;
+                {/* Navigates to Contact Page */}
                 <span onClick={() => navigate(routingPaths.contact)}>Contact Page</span>
-                &nbsp;.&nbsp;
-                <span onClick={() => window.open("https://drive.google.com/file/d/1p6rZL15SRS0ErMA62TSP743ibvuCznU2/view?usp=sharing")}>View</span>
+                &nbsp;and&nbsp;
+                <span onClick={() => window.open("https://drive.google.com/file/d/1V_pVIhrxDM45PXGfwccvKn-HUnnsMIGJ/view?usp=drive_link")}>view</span>
                 &nbsp;or&nbsp;
                 <a href='/assets/Resume/Front End Developer.pdf' download>download</a>
-                &nbsp;the resume.
+                &nbsp;my resume.
             </motion.p>
 
             <motion.img
                 alt="Resume"
                 className={`resume-img ${theme ? '' : 'dark'} mb-4`}
-                src='/assets/Resume/Front End Developer.jpg'
+                src='/assets/Resume/Front End Developer.png'
                 {...getTransitions(1.6)}
             />
 
