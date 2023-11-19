@@ -145,7 +145,7 @@ function App() {
             <motion.button
                 type="button"
                 className={`${theme ? '' : 'dark'}`}
-                onClick={handleRefresh}
+                onClick={() => setIsOnline(window.navigator.onLine)}
                 {...getTransitions(1.9)}
             >
                 Refresh
