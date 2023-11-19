@@ -20,7 +20,7 @@ function Offline({ setIsOnline }) {
             {/* Renders Offline Image */}
             <motion.img
                 alt='offline'
-                src='/assets/Offline/Offline.png'
+                src='/static/Offline/Offline.png'
                 className='mb-3'
                 {...getTransitions(1)}
             />
