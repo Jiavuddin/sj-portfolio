@@ -7,6 +7,7 @@ import Routing from '../Routing/Routing';
 import Footer from '../Footer/Footer';
 import './Projects.css';
 
+// Holds Projects Details
 const projects = [
     {
         id: 0,
@@ -68,11 +69,16 @@ const projects = [
 
 function Projects() {
 
+    // Access History Object
     const navigate = useNavigate();
 
+    // Handles Screen Mode
     const [isDesktop, setIsDesktop] = useState(false);
+
+    // Handles Project card Hover
     const [hoveredCard, setHoveredCard] = useState(null);
 
+    // Handles Shuffling Project Data 
     const projectsData = useMemo(() => {
 
         const shuffledData = [];
@@ -84,6 +90,7 @@ function Projects() {
         return shuffledData;
     }, []);
 
+    // Handles Screen Mode
     useEffect(() => {
 
         const mediaQuery = window.matchMedia('(min-width: 768px)');
@@ -102,10 +109,12 @@ function Projects() {
 
     }, []);
 
+    // Handles Mouse Enter Event Over Card
     const handleMouseEnter = (cardId) => {
         setHoveredCard(cardId);
     };
 
+    // Handles Mouse Leave Event Over Card
     const handleMouseLeave = () => {
         setHoveredCard(null);
     };
@@ -113,10 +122,12 @@ function Projects() {
     return (
         <div className='projects-div'>
 
+            {/* Renders Projects Heading */}
             <motion.h1 className='projects-h1 mt-2 mb-4' {...getTransitions(1)}>Projects.</motion.h1>
 
             <div className='projects-cards-div mb-4'>
 
+                {/* Renders Projects Data */}
                 {projectsData.map(item => (
 
                     <motion.div
@@ -130,6 +141,7 @@ function Projects() {
 
                         <div className='projects-card-inside-div'>
 
+                            {/* Renders Project Image */}
                             <picture className='projects-card-picture'>
                                 <source srcSet={`/assets/Projects/${item.src}/${item.src}.webp`} type="image/webp" />
                                 <img className='projects-card-img' src={`/assets/Projects/${item.src}/${item.src}.png`} alt={`${item.src} project`} />
@@ -137,14 +149,18 @@ function Projects() {
 
                         </div>
 
+                        {/* Renders Project Overlay Card */}
                         {((isDesktop && hoveredCard === item.id) || (!isDesktop)) && (
 
                             <div className='project-card-overlay'>
 
+                                {/* Renders Project Title */}
                                 <motion.h1 className='project-card-overlay-h1 ml-2' {...getTransitions(isDesktop ? 0.3 : 1.3)}>{item.title}</motion.h1>
 
+                                {/* Renders Project Description */}
                                 <motion.p className='project-card-overlay-p ml-2' {...getTransitions(isDesktop ? 0.6 : 1.6)}>{item.desc}</motion.p>
 
+                                {/* Renders Skilled Used in Project */}
                                 <div className='project-card-btn-div ml-2 mb-3 mb-lg-4'>
 
                                     {item.tech.map(techItem => (
@@ -171,10 +187,13 @@ function Projects() {
 
             </div>
 
+            {/* Renders Route Component */}
             <Routing />
 
+            {/* Renders Footer Component */}
             <Footer cond={true} />
 
+            {/* Adjust Spacing at the bottom of the screen */}
             <div className='pt-5'></div>
 
         </div>

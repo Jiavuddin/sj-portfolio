@@ -11,26 +11,33 @@ import "./Contact.css";
 
 function Contact() {
 
+    // Access App Theme
     const theme = useSelector(state => state.themeSlice.theme);
 
+    // Handles User Contact Details
     const [data, setdata] = useState({
         userName: "",
         email: "",
         message: "",
     });
 
+    // Handles Contact Form
     const form = useRef();
 
+    // Handles Notification
     const notification = useRef(null);
 
+    // Contact Input's Change Handler
     const onInputChange = (e) => {
         setdata({ ...data, [e.target.name]: e.target.value });
     };
 
+    // Form Submit Handler
     const onFormSubmit = (e) => {
 
         e.preventDefault();
 
+        // Fetches Valid Email Conformation
         axios({
             method: 'get',
             url: `https://api.zerobounce.in/v2/validate?api_key=60be41121a974dde99cd800e7291add9&email=${data.email}&ip_address=156.124.12.145`
@@ -40,20 +47,28 @@ function Contact() {
                 const status = res?.['data']?.['status'];
 
                 if (status === "invalid") {
+
+                    // Handles when entered invalid Email
                     notification.current?.("Please enter a valid Email!");
                 }
                 else {
 
+                    // contact Service
                     emailjs.sendForm("service_115gbis", "template_g27bwmi", form.current, "f4zrte3jDpvAWBo3h")
                         .then(res => {
+
+                            // On Successfully contacting
                             notification.current?.("Thanks for contacting me! I'll respond within 24 hours.");
                         })
                         .catch(error => {
+
+                            // Faced Issue while contacting
                             notification.current?.("Service currently unavailable. Please try again later. Thank you.");
                         });
 
                     e.target.reset();
 
+                    // Resets Contact Details
                     setdata({
                         userName: "",
                         email: "",
@@ -63,6 +78,8 @@ function Contact() {
                 }
             })
             .catch(err => {
+
+                // Faced Issue while validating Email
                 notification.current?.("Service currently unavailable. Please try again later. Thank you.");
             })
 
@@ -71,8 +88,10 @@ function Contact() {
     return (
         <div className="contact-div">
 
+            {/* Renders Contact Heading */}
             <motion.h1 className="contact-h1 mt-2 mb-4" {...getTransitions(1)}>Contact.</motion.h1>
 
+            {/* Renders Contact mail */}
             <motion.p className={`contact-p ${theme ? '' : 'dark'} mb-4`} {...getTransitions(1.3)}>
                 Get in touch or shoot me an email directly on
                 &nbsp;
@@ -80,11 +99,13 @@ function Contact() {
                 &nbsp;.
             </motion.p>
 
+            {/* Renders Contact Form */}
             <form
                 ref={form}
                 className="contact-form"
                 onSubmit={onFormSubmit}
             >
+                {/* Renders UserName Input */}
                 <motion.input
                     type="text"
                     id="fullname"
@@ -96,6 +117,7 @@ function Contact() {
                     {...getTransitions(1.6)}
                 />
 
+                {/* Renders Email Input */}
                 <motion.input
                     type="email"
                     id="email"
@@ -108,6 +130,7 @@ function Contact() {
                     {...getTransitions(1.9)}
                 />
 
+                {/* Render Contact Message Input */}
                 <motion.textarea
                     id="message"
                     name="message"
@@ -118,18 +141,23 @@ function Contact() {
                     {...getTransitions(2.2)}
                 ></motion.textarea>
 
+                {/* Renders Contact */}
                 <motion.button type="submit" className={`contact-button ${theme ? '' : 'dark'} mb-4`} {...getTransitions(2.2)}>
                     Send Message
                 </motion.button>
 
             </form>
 
+            {/* Renders Routing Component */}
             <Routing />
 
+            {/* Renders Footer Component */}
             <Footer cond={true} />
 
+            {/* Maintains Spacing at the end of the screen */}
             <div className='contact-space-div'></div>
 
+            {/* Renders Notification Component */}
             <Notification
                 children={add => {
                     notification.current = add

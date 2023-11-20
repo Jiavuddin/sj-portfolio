@@ -25,8 +25,10 @@ function Offline({ setIsOnline }) {
                 {...getTransitions(1)}
             />
 
+            {/* Renders Offline Message */}
             <motion.p {...getTransitions(1.3)}>Uh oh! It seems you're offline.</motion.p>
 
+            {/* Renders Internet Connectivity check Suggestion */}
             <motion.p className="mb-4" {...getTransitions(1.6)}>Please check your internet connection and try again.</motion.p>
 
             {/* Renders Refresh Button */}

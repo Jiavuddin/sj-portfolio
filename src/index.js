@@ -31,7 +31,10 @@ root.render(
 
             {/* Wraps React Router */}
             <Router>
+
+                {/* Renders App */}
                 <App />
+
             </Router>
 
         </Provider>

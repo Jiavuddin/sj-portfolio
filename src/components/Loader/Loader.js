@@ -4,12 +4,16 @@ import './Loader.css';
 
 function Loader() {
 
+    // Access App Theme
     const theme = useSelector(state => state.themeSlice.theme);
 
+    // Handles Loader Transition
     const [flag, setFlag] = useState(false);
 
+    // Handles Hexagon drawing
     const [drawHexagon, setDrawHexagon] = useState(false);
 
+    // Handles Loader Animation Timing
     useEffect(() => {
 
         const intervalId = setTimeout(() => {
@@ -36,10 +40,13 @@ function Loader() {
     return (
         <div className='d-flex flex-column justify-content-center align-items-center loader-div'>
 
+            {/* Renders Loader Overlay Section */}
             <div className={`overlay ${flag ? 'transitioning' : ''} ${theme ? '' : 'dark'}`}>
 
+                {/* Renders Loader page Section */}
                 <div className={`page ${flag ? 'fade-out' : ''} ${theme ? '' : 'dark'}`}>
 
+                    {/* Renders Hexagon */}
                     <div className={drawHexagon ? "hexagon-container" : ""}>
                         {drawHexagon ? (
                             <>
@@ -51,6 +58,7 @@ function Loader() {
                         ) : null}
                     </div>
 
+                    {/* Renders Name */}
                     <div className='w-100'>
                         {drawHexagon ? (
                             <h1 className='loader-h1'>Syed Jiavuddin</h1>

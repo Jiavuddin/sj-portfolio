@@ -10,12 +10,16 @@ import './Navbar.css';
 
 const Navbar = () => {
 
-    const location = useLocation();
-
+    // Access History Object
     const navigate = useNavigate();
 
+    // Access Location Object
+    const location = useLocation();
+
+    // Access Dispatch Function
     const dispatch = useDispatch();
 
+    // Access App Theme
     const theme = useSelector(state => state.themeSlice.theme);
 
     // On Change Theme Handler
@@ -26,6 +30,7 @@ const Navbar = () => {
         dispatch(changeTheme(!theme));
     };
 
+    // Handles Mobile Menu Toggle Bar
     const toggleMenu = () => {
         navigate(routingPaths.mobileNavMenu, { state: location.pathname });
     };

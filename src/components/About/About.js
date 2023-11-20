@@ -7,7 +7,9 @@ import Routing from '../Routing/Routing';
 import Footer from '../Footer/Footer';
 import './About.css';
 
+// Maintains Experience and education Data
 const experienceAndEdu = {
+    // Maintains Work Experience Details
     work: {
         napier: {
             logo: "Napier.png",
@@ -27,6 +29,7 @@ const experienceAndEdu = {
             ]
         }
     },
+    // Maintains Educational Details
     education: {
         sathyabama: {
             logo: "Sathyabama.png",
@@ -43,6 +46,7 @@ const experienceAndEdu = {
             ]
         }
     },
+    // Maintains Courses Enrolled Section
     courses: {
         nxtwave: {
             logo: "Nxtwave.svg",
@@ -92,8 +96,10 @@ const experienceAndEdu = {
 
 function About() {
 
+    // Access App Theme
     const theme = useSelector(state => state.themeSlice.theme);
 
+    // Handles Experience and Education Section collapsables
     const [collapsable, setCollapsable] = useState({
         work: false,
         education: false,
@@ -111,8 +117,10 @@ function About() {
     return (
         <div className='about-div'>
 
+            {/* Renders About Me Heading */}
             <motion.h1 className='about-h1 mt-2 mb-4' {...getTransitions(1)}>About Mé.</motion.h1>
 
+            {/* Renders About Me Details */}
             <motion.p className='about-p mb-4' {...getTransitions(1.3)}>
                 I'm a dedicated Frontend Developer with over two years of hands-on experience in React.js. My web development journey began with intensive training, igniting my passion for crafting user-centric digital experiences. I excel at translating complex concepts into intuitive interfaces, continually pushing the boundaries of design and functionality.
                 <br />
@@ -123,10 +131,12 @@ function About() {
                 I'm actively seeking collaborative, full-time, and freelance opportunities to apply my frontend development expertise. Let's join forces to create more engaging, user-friendly web experiences and enhance the digital landscape.
             </motion.p>
 
+            {/* Renders tech Stack Section Heading */}
             <motion.h1 className='about-h1 mb-5' {...getTransitions(1.6)}>Tech Stack</motion.h1>
 
             <div className='d-flex flex-row justify-content-start align-items-center about-tech-stack-div mb-4'>
 
+                {/* Renders HTML */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" {...getTransitions(1.9)}>
@@ -137,6 +147,7 @@ function About() {
 
                 </div>
 
+                {/* Renders CSS */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" {...getTransitions(1.9)}>
@@ -147,6 +158,7 @@ function About() {
 
                 </div>
 
+                {/* Renders Bootstrap */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" {...getTransitions(1.9)}>
@@ -157,6 +169,7 @@ function About() {
 
                 </div>
 
+                {/* Renders Javascript */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" {...getTransitions(1.9)}>
@@ -167,6 +180,7 @@ function About() {
 
                 </div>
 
+                {/* Renders ReactJs */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 40 40" {...getTransitions(1.9)}>
@@ -177,6 +191,7 @@ function About() {
 
                 </div>
 
+                {/* Renders Redux */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" {...getTransitions(1.9)}>
@@ -187,6 +202,7 @@ function About() {
 
                 </div>
 
+                {/* Renders NodeJs */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" {...getTransitions(1.9)}>
@@ -197,6 +213,7 @@ function About() {
 
                 </div>
 
+                {/* Renders Express */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" {...getTransitions(1.9)}>
@@ -207,6 +224,7 @@ function About() {
 
                 </div>
 
+                {/* Renders MongoDB */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" {...getTransitions(1.9)}>
@@ -217,6 +235,7 @@ function About() {
 
                 </div>
 
+                {/* Renders MySQL */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" {...getTransitions(1.9)}>
@@ -227,6 +246,7 @@ function About() {
 
                 </div>
 
+                {/* Renders Python */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" {...getTransitions(1.9)}>
@@ -237,6 +257,7 @@ function About() {
 
                 </div>
 
+                {/* Renders Git */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" {...getTransitions(1.9)}>
@@ -247,6 +268,7 @@ function About() {
 
                 </div>
 
+                {/* Renders GitLab */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" {...getTransitions(1.9)}>
@@ -257,6 +279,7 @@ function About() {
 
                 </div>
 
+                {/* Renders Github */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 30 30" {...getTransitions(1.9)}>
@@ -267,6 +290,7 @@ function About() {
 
                 </div>
 
+                {/* Renders VSC */}
                 <div className='d-flex flex-column justify-content-start align-items-center about-skill-div'>
 
                     <motion.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" {...getTransitions(1.9)}>
@@ -279,16 +303,19 @@ function About() {
 
             </div>
 
+            {/* Renders Experience and Education */}
             <motion.h1 className='about-h1 mb-4' {...getTransitions(2.2)}>Experience and Education</motion.h1>
 
             <div className='mb-5'>
 
+                {/* Renders Experience and Education Sections */}
                 {Object.keys(experienceAndEdu).map(item => {
 
                     return (
 
                         <div key={item}>
 
+                            {/* Renders Section Collapsable Heading */}
                             <motion.div className='about-collapsable-div' onClick={() => onClickCollapsable(item)} {...getTransitions(2.2)}>
 
                                 <h1>{item[0].toUpperCase() + item.slice(1)}</h1>
@@ -301,12 +328,15 @@ function About() {
 
                             </motion.div>
 
+                            {/* Renders Collapsable Section */}
                             <Collapse in={collapsable[item]}>
 
                                 <div>
 
+                                    {/* Renders List of Subsections under section  */}
                                     {Object.keys(experienceAndEdu[item]).map(subItem => {
 
+                                        // Access particular Subsection Details
                                         const dataObj = experienceAndEdu[item][subItem];
 
                                         return (
@@ -315,6 +345,7 @@ function About() {
 
                                                 <div className="about-card-div">
 
+                                                    {/* Renders Subsection Logo */}
                                                     <img
                                                         alt='napier-logo'
                                                         src={`/assets/About/${theme ? dataObj?.['logo'] : dataObj?.['logoDark'] ?? dataObj?.['logo']}`}
@@ -325,16 +356,20 @@ function About() {
 
                                                         <div className='mt-md-2'>
 
+                                                            {/* Renders Subsection Title */}
                                                             <h1 className='about-card-h1 mb-1'>{dataObj?.['title']}</h1>
 
+                                                            {/* Renders Subsection Role */}
                                                             <p className='about-card-p mb-1'>{dataObj?.['role']}</p>
 
                                                         </div>
 
                                                         <div className='mt-md-2 me-md-2'>
 
+                                                            {/* Renders Subsection Duration */}
                                                             <p className='about-card-p about-text-end mb-1'>{dataObj?.['duration']}</p>
 
+                                                            {/* Renders Subsection Location */}
                                                             <p className='about-card-p mb-1'>{dataObj?.['location']}</p>
 
                                                         </div>
@@ -342,6 +377,7 @@ function About() {
 
                                                     </div>
 
+                                                    {/* Renders Subsection Details */}
                                                     <ul className='about-card-ul mt-2'>
                                                         {dataObj?.['points'].map((liItem, index) => (
                                                             <li key={`${item}-${subItem}-li-${index}`}>{liItem}</li>
@@ -368,10 +404,13 @@ function About() {
 
             </div>
 
+            {/* Renders Routing Component */}
             <Routing />
 
+            {/* Renders Footer Component */}
             <Footer cond={true} />
 
+            {/* Maintains Spacing at the end of the screen */}
             <div className='pt-1 pt-md-5'></div>
 
         </div>

@@ -8,6 +8,7 @@ import Routing from '../Routing/Routing';
 import Footer from '../Footer/Footer';
 import './ProjectDetails.css';
 
+// Maintains Project In-Detail Data
 const projectsData = [
     {
         title: "Tourism",
@@ -93,23 +94,30 @@ const projectsData = [
 
 function ProjectDetails() {
 
+    // Access Project Id
     const { projectId } = useParams();
 
+    // Access App Theme 
     const theme = useSelector(state => state.themeSlice.theme);
 
+    // Retrives Exact Project Data based on Project Id
     const projectData = projectsData[parseInt(projectId)];
 
+    // Handles Project About Flipped Case
     const [flipped, setFlipped] = useState(false);
 
     return (
         <div className='pd-div'>
 
+            {/* Renders Project Details Heading */}
             <motion.h1 className='pd-h1 mt-2 mb-4' {...getTransitions(1)}>Project Details.</motion.h1>
 
+            {/* Renders Project Details */}
             {!!projectData ? (
 
                 <div>
 
+                    {/* Renders Project Title */}
                     <div className='mt-2 mb-3'>
                         <motion.a
                             href={projectData.url}
@@ -122,8 +130,10 @@ function ProjectDetails() {
                         </motion.a>
                     </div>
 
+                    {/* Renders Project Description */}
                     <motion.p className={`pd-project-p ${theme ? '' : 'dark'} mb-4`} {...getTransitions(1.6)}>{projectData.desc}</motion.p>
 
+                    {/* Renders Project Gif */}
                     <div className='pd-gif-card'>
                         <motion.img
                             alt={`${projectData.src} Website`}
@@ -133,30 +143,39 @@ function ProjectDetails() {
                         />
                     </div>
 
+                    {/* Handles Flip Functionality of about and technical Insights */}
                     <ReactCardFlip isFlipped={flipped} flipDirection="horizontal" cardStyles={{ front: { transformStyle: 'flat' }, back: { transformStyle: 'flat' } }} flipSpeedBackToFront={1} flipSpeedFrontToBack={1}>
 
+                        {/* Renders About Section */}
                         <div>
 
+                            {/* Renders Project About Heading */}
                             <motion.h1 className='pd-project-h1 mt-2 mb-3' {...getTransitions(2.2)}>About</motion.h1>
 
+                            {/* Renders Project About Details */}
                             <motion.p className={`pd-project-p ${theme ? '' : 'dark'} mb-3`} {...getTransitions(2.2)}>{projectData.about}</motion.p>
 
+                            {/* Renders Flip Button to technical insights */}
                             <motion.p className={`pd-project-p ${theme ? '' : 'dark'} pd-project-flip-p mb-4`} {...getTransitions(2.2)}>
                                 <span className='pd-project-flip-span' onClick={() => setFlipped(true)}>Technical Insights&ensp;{">>>"}</span>
                             </motion.p>
 
                         </div>
 
+                        {/* Renders Technical Insights Section */}
                         <div>
 
+                            {/* Renders Technical Insights Heading */}
                             <motion.h1 className='pd-project-h1 mt-2 mb-3' {...getTransitions(2.2)}>Technical Insights</motion.h1>
 
+                            {/* Renders Technical Insights Points */}
                             <motion.ul className="pd-project-ul mb-3" {...getTransitions(2.2)}>
                                 {projectData.techDetails.map((nerdPoint, index) => (
                                     <li key={`project-nerd-point-${index}`} className={theme ? '' : 'dark'}>{nerdPoint}</li>
                                 ))}
                             </motion.ul>
 
+                            {/* Renders Flip Button to About */}
                             <motion.p className={`pd-project-p ${theme ? '' : 'dark'} pd-project-flip-p mb-4`} {...getTransitions(2.2)}>
                                 <span className='pd-project-flip-span' onClick={() => setFlipped(false)}>About&ensp;{">>>"}</span>
                             </motion.p>
@@ -165,8 +184,10 @@ function ProjectDetails() {
 
                     </ReactCardFlip>
 
+                    {/* Renders Technologies Heading */}
                     <motion.h1 className='pd-project-h1 mt-2 mb-3' {...getTransitions(2.2)}>Technologies</motion.h1>
 
+                    {/* Renders Technologies Involved in Project */}
                     <div className='pd-technologies-div mb-4'>
 
                         {projectData.techUsed.map(item => (
@@ -181,6 +202,7 @@ function ProjectDetails() {
 
                     </div>
 
+                    {/* Renders Project Live Link Heading */}
                     <div className='d-flex align-items-center mb-3'>
 
                         <motion.svg
@@ -196,6 +218,7 @@ function ProjectDetails() {
 
                     </div>
 
+                    {/* Renders Project Live Link */}
                     <div className='mb-4'>
                         <motion.a
                             href={projectData.url}
@@ -208,10 +231,12 @@ function ProjectDetails() {
                         </motion.a>
                     </div>
 
+                    {/* Renders Project Credentials Section */}
                     {!!projectData.projectCreds && (
 
                         <div>
 
+                            {/* Renders Login Credentails Heading */}
                             <div className='d-flex align-items-center mb-3'>
 
                                 <motion.i className="fa-solid fa-gears pd-icon" {...getTransitions(2.2)}></motion.i>
@@ -220,6 +245,7 @@ function ProjectDetails() {
 
                             </div>
 
+                            {/* Renders Login Credentails */}
                             <div className='mb-4'>
 
                                 <motion.p className={`pd-project-p ${theme ? '' : 'dark'} mb-3`} {...getTransitions(2.2)}>Username&emsp;:&emsp;{projectData.projectCreds.username}</motion.p>
@@ -232,6 +258,7 @@ function ProjectDetails() {
 
                     )}
 
+                    {/* Renders Project Github Link Heading */}
                     <div className='d-flex align-items-center mb-3'>
 
                         <motion.i className="pd-icon fa-brands fa-github" {...getTransitions(2.2)}></motion.i>
@@ -240,6 +267,7 @@ function ProjectDetails() {
 
                     </div>
 
+                    {/* Renders Project Github Link */}
                     <div className='mb-5'>
                         <motion.a
                             href={projectData.githubUrl}
@@ -254,13 +282,17 @@ function ProjectDetails() {
 
                 </div>
             ) : (
+                // Renders No Projects if Project Id Doesn't match
                 <motion.h1 className='pd-no-data-h1 mt-2 mb-5' {...getTransitions(1.3)}>Project with this ID not found. Please check the ID or explore available projects.</motion.h1>
             )}
 
+            {/* Renders Routing Component */}
             <Routing />
 
+            {/* Renders Footer Component */}
             <Footer cond={true} />
 
+            {/* Maintains Spacing at the bottom of the screen */}
             <div className='pt-5'></div>
 
         </div>

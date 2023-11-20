@@ -9,10 +9,13 @@ import './MobileNavbar.css';
 
 function MobileNavbar() {
 
-    const theme = useSelector(state => state.themeSlice.theme);
-
+    // Access History Object
     const navigate = useNavigate();
 
+    // Access App Theme
+    const theme = useSelector(state => state.themeSlice.theme);
+
+    // Access Location Object
     const location = useLocation();
 
     // Menu Close Handler
@@ -32,7 +35,7 @@ function MobileNavbar() {
                 </motion.button>
             </div>
 
-            {/* Add your navigation links here */}
+            {/* Renders Mobile Navigation Menu Items */}
             <ul className={`d-flex flex-column justify-content-center align-items-center mobile-nav-ul ${theme ? '' : 'dark'}`}>
                 <motion.li className={`${location.state === routingPaths.home ? 'active' : ''}`} {...getTransitions(1.3)}>
                     <Link to={routingPaths.home}>Home</Link>

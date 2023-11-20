@@ -9,6 +9,7 @@ import './Home.css';
 
 function Home() {
 
+    // Maintains Screen Orientation
     const [isPortrait, setOrientation] = useState(() => window.innerHeight > window.innerWidth);
 
     // Handles Window Resize
@@ -45,6 +46,7 @@ function Home() {
 
                         <div className='d-flex flex-column justify-content-start align-items-start'>
 
+                            {/* Renders Home Logo */}
                             <motion.img
                                 alt="Home Logo"
                                 src='/assets/Home Image/home logo.png'
@@ -60,23 +62,28 @@ function Home() {
 
                         <div className='d-flex flex-column justify-content-start justify-content-md-center align-items-start h-100'>
 
+                            {/* Renders Greeting Section */}
                             <motion.h1 className='home-greetings-h1' {...getTransitions(1)}>
                                 Hello
                                 <span className='home-greetings-wave'>👋</span>
                             </motion.h1>
 
+                            {/* Renders Name Section */}
                             <div>
                                 <motion.h1 data-text="I'M SYED JIAVUDDIN" className='home-name-h1' {...getTransitions(1.3)}>
                                     <mark className="mark">I'M SYED JIAVUDDIN</mark>
                                 </motion.h1>
                             </div>
 
+                            {/* Renders Typewriter Section */}
                             <motion.span className='home-typewriter-span' {...getTransitions(1.6)}>
                                 <TypeWriter />
                             </motion.span>
 
+                            {/* Renders Routing Component */}
                             <Routing />
 
+                            {/* Renders Footer Component */}
                             <Footer cond={true} />
 
                         </div>
