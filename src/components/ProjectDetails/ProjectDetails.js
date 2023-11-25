@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router';
 import { useSelector } from 'react-redux';
+import { Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import ReactCardFlip from 'react-card-flip';
 import getTransitions from '../../utils/transitions';
@@ -89,6 +90,39 @@ const projectsData = [
         ],
         url: "https://sj-foodmunch.vercel.app/",
         githubUrl: "https://github.com/Jiavuddin/responsive-websites/tree/main/FoodMunch"
+    },
+    {
+        title: "Nxt Trendz",
+        desc: "Revamp your style, shop trends with flair.",
+        src: "NxtTrendz",
+        about: "Step into NXT Trendz, where seamless style innovation meets curated trends tailored just for you. Redefine your effortlessly chic journey with every unique choice. At NXT Trendz, every purchase goes beyond a statement—it's a reflection of your distinctive style.",
+        techDetails: [
+            "Engineered Nxt Trendz, an innovative ecommerce app with ReactJS and React Router for a seamless user experience.",
+            "Implemented secure JWT Authentication, Protected Routes, and advanced product filtering on the Login and Products pages.",
+            "Crafted a user-friendly Cart Page with session storage and context handling for optimal user interaction.",
+            "Integrated Logout functionality and a dedicated Not Found Route for a comprehensive ecommerce application."
+        ],
+        techUsed: [
+            "ReactJS",
+            "React Router",
+            "JWT Authentication",
+            "Context API",
+            "Responsive Design"
+        ],
+        url: "https://sj-nxt-trendz.vercel.app/",
+        projectCreds: [
+            {
+                heading: 'Prime User',
+                username: 'rahul',
+                password: 'rahul@2021'
+            },
+            {
+                heading: 'Non-Prime User',
+                username: 'raja',
+                password: 'raja@2021'
+            }
+        ],
+        githubUrl: "https://github.com/Jiavuddin/Nxt-Trendz"
     },
 ];
 
@@ -248,9 +282,29 @@ function ProjectDetails() {
                             {/* Renders Login Credentails */}
                             <div className='mb-4'>
 
-                                <motion.p className={`pd-project-p ${theme ? '' : 'dark'} mb-3`} {...getTransitions(2.2)}>Username&emsp;:&emsp;{projectData.projectCreds.username}</motion.p>
+                                {Array.isArray(projectData.projectCreds) ? (
+                                    <Row>
+                                        {projectData.projectCreds.map(eachCred => (
+                                            <Col key={eachCred.heading} xs={12} md={6}>
 
-                                <motion.p className={`pd-project-p ${theme ? '' : 'dark'} mb-3`} {...getTransitions(2.2)}>Password&emsp;&nbsp;:&emsp;{projectData.projectCreds.password}</motion.p>
+                                                <motion.h1 className={`pd-project-creds-h1 ${theme ? '' : 'dark'} mb-3`} {...getTransitions(2.2)}>{eachCred.heading}</motion.h1>
+
+                                                <motion.p className={`pd-project-p ${theme ? '' : 'dark'} mb-3`} {...getTransitions(2.2)}>Username&emsp;:&emsp;{eachCred.username}</motion.p>
+
+                                                <motion.p className={`pd-project-p ${theme ? '' : 'dark'} mb-3`} {...getTransitions(2.2)}>Password&emsp;&nbsp;:&emsp;{eachCred.password}</motion.p>
+
+                                            </Col>
+                                        ))}
+                                    </Row>
+                                ) : (
+                                    <>
+
+                                        <motion.p className={`pd-project-p ${theme ? '' : 'dark'} mb-3`} {...getTransitions(2.2)}>Username&emsp;:&emsp;{projectData.projectCreds.username}</motion.p>
+
+                                        <motion.p className={`pd-project-p ${theme ? '' : 'dark'} mb-3`} {...getTransitions(2.2)}>Password&emsp;&nbsp;:&emsp;{projectData.projectCreds.password}</motion.p>
+
+                                    </>
+                                )}
 
                             </div>
 

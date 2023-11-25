@@ -65,6 +65,20 @@ const projects = [
             "JavaScript"
         ],
     },
+    {
+        id: 4,
+        alt: "Nxt Trendz Website",
+        src: "NxtTrendz",
+        title: "Nxt Trendz",
+        desc: "Revamp your style, shop trends with flair.",
+        tech: [
+            "ReactJS",
+            "React Router",
+            "JWT Authentication",
+            "Context API",
+            "Responsive Design"
+        ],
+    },
 ];
 
 function Projects() {

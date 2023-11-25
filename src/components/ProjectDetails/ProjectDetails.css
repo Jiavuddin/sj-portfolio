@@ -131,6 +131,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
+    gap: 12px;
 }
 
 .pd-technology-btn {
@@ -189,7 +190,8 @@
     fill: var(--background-color-light);
 }
 
-.pd-website-a {
+.pd-website-a,
+.pd-project-creds-h1 {
     font-size: 14px;
     font-family: 'NeurialGrotesk';
     text-rendering: geometricprecision;
@@ -210,7 +212,8 @@
     }
 }
 
-.pd-website-a.dark {
+.pd-website-a.dark,
+.pd-project-creds-h1.dark {
     color: var(--background-color-light);
 }
 
