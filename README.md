@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my portfolio website! This ReactJS-based application showcases my skills, projects, and information about me.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Portfolio Website](#portfolio-website)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [App Level Functionalities](#app-level-functionalities)
+  - [Detail Page Explanation](#detail-page-explanation)
+    - [Home Page](#home-page)
+    - [About Me Page](#about-me-page)
+    - [Projects Page](#projects-page)
+    - [Resume Page](#resume-page)
+    - [Contact Page](#contact-page)
+  - [How to Run Locally](#how-to-run-locally)
+  - [Dependencies](#dependencies)
+  - [Contributing](#contributing)
+  - [Roadmap](#roadmap)
+  - [Credits](#credits)
+  - [License](#license)
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This portfolio website is built using ReactJS, featuring a clean and responsive design. It includes several key features to enhance user experience, such as a dynamic light/dark theme, a unique loader, and seamless navigation through various sections.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## App Level Functionalities
 
-### `npm test`
+- **Light/Dark Theme:**
+  - The application supports a dynamic light/dark theme.
+  - The default theme is based on the user's system theme and persists across reloads.
+  - Users can manually switch between light and dark themes, overriding the system theme.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Loader:**
+  - A custom-designed loader provides a visually appealing experience during page loading.
 
-### `npm run build`
+- **Navigation:**
+  - The navigation bar facilitates easy access to different sections: Home, About Me, Projects, and Contact.
+  - A footer includes links to various profiles: Github, Gitlab, LinkedIn, Leetcode, YouTube, and a dedicated Resume page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Detail Page Explanation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Home Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Displays a personalized greeting, name, and roles with a typewriter effect.
+- Includes an image of the system setup, a plant, and a coffee, enhancing the user's connection to the developer.
 
-### `npm run eject`
+### About Me Page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Three concise paragraphs introducing myself.
+- A section detailing my tech stack, work experience, education, and completed courses.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Projects Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Lists projects with images and overlays that provide project details on hover.
+- Clicking on a project navigates to a detailed project page with project title, description, GIF, technical insights, live link, credentials, and Github repo link.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Resume Page
 
-## Learn More
+- A brief description of myself with links to the contact page and options to view or download my resume.
+- Includes an image of my resume.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Contact Page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- A one-liner allowing users to directly email me.
+- A form for users to provide their name, email, and a message.
+  - Utilizes a third-party service to validate email addresses.
+  - Sends an email to the developer upon successful submission, and simultaneously, the user will receive an autogenerated email.
+  - Provides appropriate notifications for success, invalid email, or service unavailability.
 
-### Code Splitting
+## How to Run Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone the repository: `git clone https://github.com/Jiavuddin/sj-portfolio.git`
+2. Navigate to the project directory: `cd sj-portfolio`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open your browser and visit `http://localhost:3000` to view the application.
 
-### Analyzing the Bundle Size
+## Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+List any external libraries or services your project depends on, and include instructions on how to install them.
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+If you want to contribute to this project, follow these steps:
 
-### Advanced Configuration
+1. Fork the repository.
+2. Create a new branch for your feature: `git checkout -b feature-name`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature-name`
+5. Submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Roadmap
 
-### Deployment
+As the portfolio evolves, here are some potential future enhancements:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Open Source Contributions:**
+  - Explore opportunities for contributing to open-source projects.
+  - Showcase contributions and involvement in the wider developer community.
 
-### `npm run build` fails to minify
+- **Freelance Work:**
+  - Consider taking on freelance projects to diversify the portfolio.
+  - Highlight freelance work and collaborations with clients.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+These additions aim to provide a broader perspective on my skills and experiences, reflecting a commitment to continuous learning and engagement with the wider tech community.
+
+## Credits
+
+- The website design was inspired by [CodeWonders](https://www.codewonders.dev/), with a unique implementation developed for this project.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

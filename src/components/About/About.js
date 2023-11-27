@@ -22,7 +22,7 @@ const experienceAndEdu = {
                 "Led the successful conversion of the HIS product from AngularJS to ReactJs, optimizing user experience and performance.",
                 "Led critical upgrades for a government client project, aligning the HIS product with industry standards and client requirements.",
                 "Developed numerous screens, showcasing design expertise and contributing to the usability and functionality of healthcare software solutions.",
-                "Created efficient reusable components, aiding developers in seamless service integration and test case implementation, optimizing project efficiencyz.",
+                "Created efficient reusable components, aiding developers in seamless service integration and test case implementation, optimizing project efficiency.",
                 "Swiftly resolved intricate issues, consistently delivering prompt and precise solutions to ensure the seamless operation of healthcare systems.",
                 "Made substantial contributions to test case coverage, ensuring software robustness and reliability.",
                 "Thrived in collaborative environments, fostering teamwork and shared project success.",
@@ -42,7 +42,7 @@ const experienceAndEdu = {
                 "Earned an online certification in Microprocessors and Microcontrollers through NPTEL, showcasing expertise in embedded systems.",
                 "Successfully completed industrial automation and robotics training by the MSME Technology Development Centre, enhancing practical skills.",
                 "Received a certificate of participation for actively engaging in a workshop on launch vehicle aerodynamics led by ISRO scientists, gaining insights into aerospace technology.",
-                "Actively contributed as an active member of the Robotics Club, fostering a passion for automation and cutting-edge technology."
+                "Actively contributed as a member of the Robotics Club, fostering a passion for automation and cutting-edge technology."
             ]
         }
     },
@@ -65,7 +65,7 @@ const experienceAndEdu = {
                 "Learned efficient version control with Git, enabling collaborative coding and code management.",
                 "Gained expertise in querying databases with SQL, data modeling, and utilizing SQL databases for various applications.",
                 "Delved into Node.js, building server-side applications, creating CRUD APIs, implementing middleware, and securing APIs.",
-                "Applied React.js knowledge hands-on by creating applications similar to LinkedIn, Netflix, and Amazon, showcasing proficiency in this popular frontend library."
+                "Applied React.js knowledge hands-on by creating applications similar to Netflix and Amazon, showcasing proficiency in this popular frontend library."
             ]
         },
         mongoDb: {
