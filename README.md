@@ -15,7 +15,6 @@ Welcome to my portfolio website! This ReactJS-based application showcases my ski
     - [Resume Page](#resume-page)
     - [Contact Page](#contact-page)
   - [How to Run Locally](#how-to-run-locally)
-  - [Dependencies](#dependencies)
   - [Contributing](#contributing)
   - [Roadmap](#roadmap)
   - [Credits](#credits)
@@ -76,10 +75,6 @@ This portfolio website is built using ReactJS, featuring a clean and responsive 
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
 5. Open your browser and visit `http://localhost:3000` to view the application.
-
-## Dependencies
-
-List any external libraries or services your project depends on, and include instructions on how to install them.
 
 ## Contributing
 
