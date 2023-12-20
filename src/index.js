@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from 'react-redux';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import App from './App';
 import { store } from './utils/StoreSetup/store';
 import reportWebVitals from './reportWebVitals';
@@ -38,6 +39,8 @@ root.render(
             </Router>
 
         </Provider>
+
+        <SpeedInsights />
 
     </React.StrictMode>
 );
